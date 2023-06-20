@@ -10,5 +10,7 @@
 </head>
 <body class="body-1">
     @include('components.home')
+
+    <script src='/js/app.js'></script>
 </body>
 </html>
