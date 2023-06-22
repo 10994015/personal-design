@@ -47,14 +47,13 @@ animate()
 const skilltext = document.getElementsByClassName('skilltext');
 const worktext = document.getElementsByClassName('worktext');
 window.addEventListener('scroll', (e)=>{
-    let value = window.scrollY-2000;
-    let value2 = window.scrollY -5000;
-    console.log(value);
+    let value = (window.scrollY/4) * 0.8;
+    let value2 = (window.scrollY/4) * 0.8;
     for(let i=0;i<worktext.length;i++){
-        worktext[i].style.transform = `translateX(-${value*0.8}px)`
+        worktext[i].style.transform = `translateX(-${value}px)`
     }
     for(let i=0;i<skilltext.length;i++){
-        skilltext[i].style.transform = `translateX(-${value2*0.8}px)`
+        skilltext[i].style.transform = `translateX(-${value2}px)`
     }
 })
 const send  =document.getElementById('send');
@@ -99,3 +98,17 @@ send.addEventListener('click', ()=>{
         speed5.style.display = 'block'
     }, 3900)
 })
+const header = document.querySelector('header')
+
+window.addEventListener("wheel", handleWheelEvent);
+// window.addEventListener('scroll', handleScrollEvent)
+
+function handleWheelEvent(event) {
+    if (event.deltaY > 0) {
+      if(this.scrollY > 100){
+          header.style.top = "-78px"
+      }
+    } else if (event.deltaY < 0) {
+      header.style.top = "0"
+    }
+  }

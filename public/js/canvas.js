@@ -61,14 +61,13 @@ animate();
 var skilltext = document.getElementsByClassName('skilltext');
 var worktext = document.getElementsByClassName('worktext');
 window.addEventListener('scroll', function (e) {
-  var value = window.scrollY - 2000;
-  var value2 = window.scrollY - 5000;
-  console.log(value);
+  var value = window.scrollY / 4 * 0.8;
+  var value2 = window.scrollY / 4 * 0.8;
   for (var i = 0; i < worktext.length; i++) {
-    worktext[i].style.transform = "translateX(-".concat(value * 0.8, "px)");
+    worktext[i].style.transform = "translateX(-".concat(value, "px)");
   }
   for (var _i = 0; _i < skilltext.length; _i++) {
-    skilltext[_i].style.transform = "translateX(-".concat(value2 * 0.8, "px)");
+    skilltext[_i].style.transform = "translateX(-".concat(value2, "px)");
   }
 });
 var send = document.getElementById('send');
@@ -112,5 +111,18 @@ send.addEventListener('click', function () {
     speed5.style.display = 'block';
   }, 3900);
 });
+var header = document.querySelector('header');
+window.addEventListener("wheel", handleWheelEvent);
+// window.addEventListener('scroll', handleScrollEvent)
+
+function handleWheelEvent(event) {
+  if (event.deltaY > 0) {
+    if (this.scrollY > 100) {
+      header.style.top = "-78px";
+    }
+  } else if (event.deltaY < 0) {
+    header.style.top = "0";
+  }
+}
 /******/ })()
 ;

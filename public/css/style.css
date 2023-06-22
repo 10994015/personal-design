@@ -1,6 +1,7 @@
 * {
   font-family: "Kanit", "cwTeXYen", sans-serif;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html, body {
@@ -17,6 +18,55 @@ html, body {
   width: 100%;
   height: auto;
   overflow: hidden;
+}
+
+header {
+  z-index: 1000;
+  width: 100vw;
+  height: 80px;
+  background-color: #fff;
+  border: 2px solid #0d0d0d;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 64px;
+  padding-right: 64px;
+  display: flex;
+  position: fixed;
+  top: 0%;
+  bottom: auto;
+  left: 0%;
+  right: 0%;
+  transition: 0.3s;
+}
+header > .navigation {
+  grid-column-gap: 64px;
+  grid-row-gap: 64px;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+}
+header > .navigation a {
+  color: #0d0d0d;
+  font-size: 24px;
+  font-weight: 600;
+}
+header > .navigation a:hover {
+  color: #FF81CC;
+}
+header > .icon {
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+}
+
+.banner {
+  height: 100vw;
+  height: 100vh;
+  border-bottom: 2px #0d0d0d solid;
+  background-color: #FF5F53;
 }
 
 .experience {
@@ -69,9 +119,16 @@ html, body {
   width: 100%;
   border-bottom: 2px solid #000;
 }
+@media screen and (max-width: 768px) {
+  .experience > .content > .personal {
+    flex-direction: column;
+    padding-left: 12px;
+    padding-right: 19px;
+  }
+}
 .experience > .content > .personal > .image {
   position: relative;
-  width: 340px;
+  min-width: 340px;
   height: 340px;
   border-radius: 50%;
   border: 1px #0D0D0D solid;
@@ -86,8 +143,19 @@ html, body {
   margin-left: 15px;
   position: relative;
 }
+@media screen and (max-width: 768px) {
+  .experience > .content > .personal > .balloon-tip {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+}
 .experience > .content > .personal > .balloon-tip img {
   max-width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .experience > .content > .personal > .balloon-tip img {
+    transform: rotate(90deg);
+  }
 }
 .experience > .content > .personal > .paragraph {
   max-width: 840px;
@@ -102,6 +170,13 @@ html, body {
   box-shadow: 7px 7px #0d0d0d;
   letter-spacing: 1.4px;
 }
+@media screen and (max-width: 768px) {
+  .experience > .content > .personal > .paragraph {
+    margin-left: 0px;
+    margin-top: -11px;
+    padding: 32px;
+  }
+}
 .experience > .content > .personal > .paragraph > .basic {
   display: flex;
   align-items: center;
@@ -109,6 +184,7 @@ html, body {
 }
 .experience > .content > .personal > .paragraph > .basic h3 {
   font-size: 20px;
+  text-align: justify;
 }
 .experience > .content > .personal > .paragraph i {
   margin-bottom: 15px;
@@ -125,80 +201,138 @@ html, body {
 }
 .experience > .content > .accordions .accordions-list {
   width: 100%;
-  height: 88px;
+  height: auto;
   overflow: hidden;
   border-bottom-width: 1px;
   border-top-width: 1px;
   border: 1px solid #0d0d0d;
-  transition: 0.8s ease-in-out;
 }
 .experience > .content > .accordions .accordions-list > .job {
   width: 100%;
-  height: 88px;
   border: 2px solid #0d0d0d;
+  border-bottom: none;
   justify-content: space-between;
   align-items: center;
   margin-top: -1px;
   padding: 24px 40px;
   display: flex;
+  height: 88px;
+}
+@media screen and (max-width: 781px) {
+  .experience > .content > .accordions .accordions-list > .job {
+    height: 140px;
+  }
+}
+@media screen and (max-width: 414px) {
+  .experience > .content > .accordions .accordions-list > .job {
+    padding: 24px 24px;
+  }
 }
 .experience > .content > .accordions .accordions-list > .job > .data {
   grid-column-gap: 52px;
   align-items: center;
   display: flex;
 }
+@media screen and (max-width: 781px) {
+  .experience > .content > .accordions .accordions-list > .job > .data {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 .experience > .content > .accordions .accordions-list > .job > .data > .date {
+  min-width: 200px;
   width: 30%;
-  min-width: 260px;
   color: #0d0d0d;
   margin-top: 4px;
   font-size: 32px;
   line-height: 46px;
   font-weight: 900;
 }
+@media screen and (max-width: 1081px) {
+  .experience > .content > .accordions .accordions-list > .job > .data > .date {
+    font-size: 24px;
+    min-width: 130px;
+  }
+}
+@media screen and (max-width: 781px) {
+  .experience > .content > .accordions .accordions-list > .job > .data > .date {
+    min-width: 200px;
+    margin-top: 0;
+    width: 100%;
+    line-height: 23px;
+  }
+}
 .experience > .content > .accordions .accordions-list > .job > .data > .cmopany-name {
-  min-width: 180px;
+  min-width: 220px;
   width: 25%;
   color: #0d0d0d;
   font-family: Roobert, sans-serif;
   font-size: 18px;
   line-height: 28px;
 }
+@media screen and (max-width: 960px) {
+  .experience > .content > .accordions .accordions-list > .job > .data > .cmopany-name {
+    min-width: 140px;
+  }
+}
+@media screen and (max-width: 781px) {
+  .experience > .content > .accordions .accordions-list > .job > .data > .cmopany-name {
+    min-width: 220px;
+    width: 100%;
+  }
+}
 .experience > .content > .accordions .accordions-list > .job > .data > .role {
-  min-width: 240px;
+  min-width: 220px;
   width: 25%;
   color: #0d0d0d;
   font-family: Roobert, sans-serif;
   font-size: 16px;
   line-height: 22px;
 }
+@media screen and (max-width: 960px) {
+  .experience > .content > .accordions .accordions-list > .job > .data > .role {
+    min-width: 140px;
+  }
+}
+@media screen and (max-width: 781px) {
+  .experience > .content > .accordions .accordions-list > .job > .data > .role {
+    min-width: 220px;
+    width: 100%;
+  }
+}
 .experience > .content > .accordions .accordions-list > .job > .data > .address {
-  width: 240px;
+  min-width: 120px;
   width: 20%;
   color: #0d0d0d;
   font-family: Roobert, sans-serif;
   font-size: 16px;
   line-height: 22px;
 }
+@media screen and (max-width: 781) {
+  .experience > .content > .accordions .accordions-list > .job > .data > .address {
+    width: 100%;
+  }
+}
 .experience > .content > .accordions .accordions-list > .job > .plus {
   cursor: pointer;
   transition: 0.8s;
 }
 .experience > .content > .accordions .accordions-list > .job > .plus.rotate {
-  transform: rotate(765deg);
+  transform: rotate(135deg);
 }
 .experience > .content > .accordions .accordions-list > .accordion-content {
   width: 100%;
-  background-color: #FFCB46;
-  height: auto;
+  background-color: #FF5F53;
+  height: 0;
   min-height: 0;
+  border-top: 2px solid #0d0d0d;
   border-bottom: 1px solid #0d0d0d;
   border-left: 2px solid #0d0d0d;
   border-right: 2px solid #0d0d0d;
-  margin-top: 0;
   padding: 0 40px;
   overflow: hidden;
   grid-row-gap: 14px;
+  transition: 0.8s ease-in-out;
 }
 .experience > .content > .accordions .accordions-list > .accordion-content > .list {
   display: flex;
@@ -213,7 +347,7 @@ html, body {
 }
 
 .paper {
-  background-color: #FF5F53;
+  background-color: #f8973c;
   border-bottom: 2px solid #000;
   justify-content: center;
   padding: 160px 0;
@@ -228,7 +362,8 @@ html, body {
 }
 .paper > .paper-container > .paper-cover {
   z-index: 2;
-  width: 1200px;
+  max-width: 1200px;
+  width: 100%;
   height: 808px;
   background-color: #6EA7FE;
   border: 2px solid #0d0d0d;
@@ -237,9 +372,23 @@ html, body {
   display: flex;
   position: relative;
 }
+@media screen and (max-width: 1280px) {
+  .paper > .paper-container > .paper-cover {
+    flex-direction: column;
+    height: 1650px;
+    width: 95%;
+    margin: auto;
+  }
+}
 .paper > .paper-container > .paper-cover > .left {
   width: 50%;
   padding: 60px;
+}
+@media screen and (max-width: 1280px) {
+  .paper > .paper-container > .paper-cover > .left {
+    width: 100%;
+    padding: 10px 60px;
+  }
 }
 .paper > .paper-container > .paper-cover > .left > .paper-img {
   width: 100%;
@@ -253,6 +402,12 @@ html, body {
   flex-direction: column;
   padding: 60px;
   display: flex;
+}
+@media screen and (max-width: 1280px) {
+  .paper > .paper-container > .paper-cover > .right {
+    width: 100%;
+    padding: 10px 60px;
+  }
 }
 .paper > .paper-container > .paper-cover > .right > h2 {
   color: #0d0d0d;
@@ -306,6 +461,18 @@ html, body {
   top: 20px;
   right: 20px;
 }
+@media screen and (max-width: 1280px) {
+  .paper > .paper-container > .paper-page2 {
+    width: 92%;
+    height: 1650px;
+    margin-top: -5px;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: auto;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
 .paper > .paper-container > .paper-page3 {
   width: 1200px;
   height: 808px;
@@ -317,15 +484,26 @@ html, body {
   right: 0;
   box-shadow: 7px 7px #0d0d0d;
 }
+@media screen and (max-width: 1280px) {
+  .paper > .paper-container > .paper-page3 {
+    width: 88%;
+    height: 1650px;
+    margin: 0 auto;
+    margin-top: -5px;
+    right: 50%;
+    transform: translateX(50%);
+    bottom: auto;
+    box-shadow: 0 20px 0 -10px #0d0d0d;
+  }
+}
 
 .awards {
-  background-color: #6EA7FE;
+  background-color: #D661FF;
   border-bottom: 2px solid #0d0d0d;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   padding-top: 0;
-  padding-bottom: 0;
   display: flex;
   position: relative;
   top: 0%;
@@ -333,7 +511,7 @@ html, body {
   left: 0%;
   right: 0%;
   overflow: hidden;
-  padding-bottom: 260px;
+  padding-bottom: 240px;
 }
 .awards > .awards-container {
   z-index: 0;
@@ -349,7 +527,8 @@ html, body {
   top: 0%;
   left: 0%;
   right: 0%;
-  overflow: hidden;
+  padding-left: 12px;
+  padding-right: 19px;
 }
 .awards > .awards-container > .title {
   z-index: 10;
@@ -360,12 +539,24 @@ html, body {
   margin-bottom: 100px;
   display: flex;
 }
+@media screen and (max-width: 768px) {
+  .awards > .awards-container > .title {
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+}
 .awards > .awards-container > .title h2 {
   color: #0d0d0d;
   text-transform: uppercase;
-  font-size: 3vw;
+  font-size: 4vw;
   font-weight: 600;
   line-height: 0.5;
+}
+@media screen and (max-width: 768px) {
+  .awards > .awards-container > .title h2 {
+    font-size: 34px;
+    margin-top: 30px;
+  }
 }
 .awards > .awards-container > .awards-list {
   z-index: 1;
@@ -378,6 +569,11 @@ html, body {
   width: 100%;
   max-width: 1240px;
   box-shadow: 7px 7px #000;
+}
+@media screen and (max-width: 768px) {
+  .awards > .awards-container > .awards-list {
+    padding: 40px 50px;
+  }
 }
 .awards > .awards-container > .awards-list > .item {
   width: 100%;
@@ -437,6 +633,14 @@ html, body {
   overflow: hidden;
   box-shadow: 7px 7px #fff;
 }
+@media screen and (max-width: 900px) {
+  .works > .work-disclaimer {
+    flex-direction: column;
+    grid-column-gap: 0px;
+    grid-row-gap: 20px;
+    align-items: center;
+  }
+}
 .works > .work-disclaimer > .text {
   width: 70%;
   color: #fff;
@@ -462,6 +666,11 @@ html, body {
   display: flex;
   box-shadow: 4px 4px #fff;
 }
+@media screen and (max-width: 900px) {
+  .works > .work-disclaimer > a {
+    min-width: 230px;
+  }
+}
 .works > .work-disclaimer > a:hover {
   background-color: #01fdf6;
   box-shadow: 1px 1px #0d0d0d;
@@ -477,6 +686,17 @@ html, body {
   grid-row-gap: 25px;
   position: relative;
   z-index: 1;
+  padding: 0 20px;
+}
+@media screen and (max-width: 1300px) {
+  .works > .works-list {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+@media screen and (max-width: 576px) {
+  .works > .works-list {
+    grid-template-columns: repeat(1, 100%);
+  }
 }
 .works > .works-list > .item {
   width: 100%;
@@ -569,6 +789,21 @@ html, body {
   max-width: 1240px;
   margin-top: 120px;
 }
+@media screen and (max-width: 1419px) {
+  .works > .skills {
+    grid-template-columns: repeat(4, 25%);
+  }
+}
+@media screen and (max-width: 880px) {
+  .works > .skills {
+    grid-template-columns: repeat(3, 33.3333333333%);
+  }
+}
+@media screen and (max-width: 656px) {
+  .works > .skills {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
 .works > .skills > .skill {
   display: flex;
   align-items: center;
@@ -591,24 +826,12 @@ html, body {
   box-shadow: 7px 7px #fff;
   margin: 0 auto;
   background-color: #0D0D0D;
+  margin-left: -7px;
 }
-.works > .skills > .skill > .progressbar {
-  display: flex;
-  align-items: center;
-  background-color: #E28B3D;
-  padding: 6px;
-  border-radius: 3px;
-  transform: translateX(-15px);
-}
-.works > .skills > .skill > .progressbar > .bar {
-  margin: 0 3px;
-  width: 10px;
-  height: 15px;
-  background: linear-gradient(to bottom right, #FFCB46, #fce2a2);
-  border-radius: 3px;
-}
-.works > .skills > .skill > .progressbar > .bar.dark {
-  background: linear-gradient(to bottom right, #2e2d2d, #4B4B4B);
+@media screen and (max-width: 656px) {
+  .works > .skills > .skill .title {
+    width: 100%;
+  }
 }
 
 .contacts {
@@ -940,6 +1163,7 @@ html, body {
   box-shadow: 4px 4px #0d0d0d;
   outline: none;
   padding: 10px;
+  resize: none;
 }
 .contacts > .form-container > .letter > .form .bototm label textarea:focus {
   box-shadow: none;
