@@ -12,5 +12,8 @@
     @include('components.home')
 
     <script src='/js/app.js'></script>
+    <script src='/js/index.min.js'></script>
+    <script src='/js/canvas.js'></script>
+    @stack('scripts')
 </body>
 </html>

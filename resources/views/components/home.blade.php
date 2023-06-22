@@ -9,7 +9,8 @@
         <div class="content">
             <div class="personal">
                 <div class="image">
-                    <img src="/images/head.png" />
+                    <canvas id="me"></canvas>
+                    {{-- <img src="/images/me.png" /> --}}
                 </div>
                 <div class="balloon-tip">
                     <img src="/images/balloon_tip.svg" alt="">
@@ -103,4 +104,35 @@
             <div class="paper-page3"></div>
         </div>
     </div>
+    <div class="awards">
+        <canvas id="falling"></canvas>
+        <div class="awards-container">
+            <div class="title">
+                <h2>課外活動經歷</h2>
+            </div>
+            <div class="awards-list">
+                @foreach($awards as $award)
+                <div class="item">
+                    <div>{{$award}}</div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+    <div class="works">
+        <div class="work-marquee">
+            @for($i=0;$i<10;$i++)
+            <div class="worktext">WORK</div>
+            @endfor
+        </div>
+    </div>
 </div>
+
+@push('scripts')
+<script>
+    var confettiSettings = { target: 'falling', size:'1.8' };
+    var confetti = new ConfettiGenerator(confettiSettings);
+    confetti.render();
+    
+</script>
+@endpush

@@ -84,6 +84,16 @@ class HomeController extends Controller
             ],
             
         ];
-        return view("index", ['jobs'=>$jobs]);
+        $awards = [
+            '中原大學畢業專題競賽第三名',
+            '全國資訊管理前瞻技術研討會第五名',
+            '109學年度第2學期中原大學優良課業守護天使',
+            'Microsoft Technology Python證照',
+            '110學年度創新產業人才培育專班完課證明',
+            '101學科能力競賽(數學科)佳作',
+            '101學年度遠哲科學競賽第二名',
+            '101學年度數學金頭腦競賽第二名'
+        ];
+        return view("index", ['jobs'=>$jobs, 'awards'=>$awards]);
     }
 }
