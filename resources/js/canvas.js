@@ -43,10 +43,13 @@ function animate(){
     me.update()
 }
 animate()
+const water = document.getElementById('waters').querySelector('.water')
 
 const skilltext = document.getElementsByClassName('skilltext');
 const worktext = document.getElementsByClassName('worktext');
+const basic = 90
 window.addEventListener('scroll', (e)=>{
+    console.log(water.style.transform);
     let value = (window.scrollY/4) * 0.8;
     let value2 = (window.scrollY/4) * 0.8;
     for(let i=0;i<worktext.length;i++){
@@ -68,6 +71,7 @@ const speed1 = document.getElementById('speed1')
 const speed2 = document.getElementById('speed2')
 const speed3 = document.getElementById('speed3')
 const speed4 = document.getElementById('speed4')
+const speed5 = document.getElementById('speed5')
 
 send.addEventListener('click', ()=>{
     form.style.transform = 'translateY(950px)'
@@ -83,8 +87,7 @@ send.addEventListener('click', ()=>{
     }, 2000)
     setTimeout(()=>{
         formContainer.classList.add('send');
-        thenk.style.top = '50%'
-        thenk.style.opacity =1
+        
     }, 3000)
     setTimeout(()=>{
         speed1.style.display = 'block'
@@ -96,6 +99,8 @@ send.addEventListener('click', ()=>{
     }, 3800)
     setTimeout(()=>{
         speed5.style.display = 'block'
+        thenk.style.top = '50%'
+        thenk.style.opacity =1
     }, 3900)
 })
 const header = document.querySelector('header')
@@ -112,3 +117,5 @@ function handleWheelEvent(event) {
       header.style.top = "0"
     }
   }
+
+

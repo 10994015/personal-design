@@ -30,7 +30,14 @@
             </a>
         </div>
     </header>
-    <div class="banner"></div>
+    <div class="water-container">
+        <div class="waters" id="waters">
+            <img src="/images/waters/6.png" class="water" />
+        </div>
+    </div>
+    <div class="banner">
+       
+    </div>
     <div class="experience" id="experience">
         <div class="marquee">
             <h2 class="full">EXPERIENCE</h2>
@@ -191,6 +198,7 @@
             @endforeach
         </div>
     </div>
+    <div id="contacts"></div>
     <div class="contacts" id="contacts">
         <h2>與我聯繫</h2>
         <div class="thenk" id="thenk"><h3>TAHNK YOU!</h3></div>

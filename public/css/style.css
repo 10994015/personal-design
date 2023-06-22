@@ -62,11 +62,43 @@ header > .icon {
   display: flex;
 }
 
+.water-container {
+  max-width: 100vw;
+  overflow: hidden;
+}
+.water-container .waters {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.water-container .waters > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  transition: 0.3s;
+  transform: translate(-700px, -400px) scale(0.5);
+}
+
 .banner {
   height: 100vw;
   height: 100vh;
   border-bottom: 2px #0d0d0d solid;
   background-color: #FF5F53;
+}
+.banner > .content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.banner > .content > img {
+  width: 500px;
 }
 
 .experience {
@@ -838,6 +870,7 @@ header > .icon {
   height: auto;
   padding-top: 140px;
   position: relative;
+  overflow: hidden;
 }
 .contacts > h2 {
   color: #0d0d0d;

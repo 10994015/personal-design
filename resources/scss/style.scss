@@ -59,11 +59,43 @@ header{
         display: flex;
     }
 }
+.water-container{
+    max-width: 100vw;
+    overflow: hidden;
+    .waters{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left:0;
+        overflow: hidden;
+        >img{
+            position: absolute;
+            top: 0;
+            left:0;
+            min-width: 100%;
+            transition: .3s;
+            transform: translate(-700px, -400px) scale(0.5) ;
+        }
+    }
+}
+
 .banner{
     height: 100vw;
     height: 100vh;
     border-bottom: 2px #0d0d0d solid;
     background-color: $mainColor;
+    >.content{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        >img{
+            width: 500px;
+        }
+    }
 }
 .experience{
     width: 100vw;
@@ -777,6 +809,7 @@ header{
     height: auto;
     padding-top: 140px;
     position: relative;
+    overflow: hidden;
     >h2{
         color: #0d0d0d;
         text-align: center;

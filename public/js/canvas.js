@@ -58,9 +58,12 @@ function animate() {
   me.update();
 }
 animate();
+var water = document.getElementById('waters').querySelector('.water');
 var skilltext = document.getElementsByClassName('skilltext');
 var worktext = document.getElementsByClassName('worktext');
+var basic = 90;
 window.addEventListener('scroll', function (e) {
+  console.log(water.style.transform);
   var value = window.scrollY / 4 * 0.8;
   var value2 = window.scrollY / 4 * 0.8;
   for (var i = 0; i < worktext.length; i++) {
@@ -82,6 +85,7 @@ var speed1 = document.getElementById('speed1');
 var speed2 = document.getElementById('speed2');
 var speed3 = document.getElementById('speed3');
 var speed4 = document.getElementById('speed4');
+var speed5 = document.getElementById('speed5');
 send.addEventListener('click', function () {
   form.style.transform = 'translateY(950px)';
   letter.style.paddingTop = '150px';
@@ -96,8 +100,6 @@ send.addEventListener('click', function () {
   }, 2000);
   setTimeout(function () {
     formContainer.classList.add('send');
-    thenk.style.top = '50%';
-    thenk.style.opacity = 1;
   }, 3000);
   setTimeout(function () {
     speed1.style.display = 'block';
@@ -109,6 +111,8 @@ send.addEventListener('click', function () {
   }, 3800);
   setTimeout(function () {
     speed5.style.display = 'block';
+    thenk.style.top = '50%';
+    thenk.style.opacity = 1;
   }, 3900);
 });
 var header = document.querySelector('header');
