@@ -58,12 +58,13 @@ function animate() {
   me.update();
 }
 animate();
-var water = document.getElementById('waters').querySelector('.water');
 var skilltext = document.getElementsByClassName('skilltext');
 var worktext = document.getElementsByClassName('worktext');
-var basic = 90;
+var moveleft = document.getElementById('moveleft');
+var moveright = document.getElementById('moveright');
 window.addEventListener('scroll', function (e) {
-  console.log(water.style.transform);
+  moveleft.style.transform = "translateX(-".concat(window.scrollY * 0.8, "px)");
+  moveright.style.transform = "translateX(".concat(window.scrollY * 0.8, "px)");
   var value = window.scrollY / 4 * 0.8;
   var value2 = window.scrollY / 4 * 0.8;
   for (var i = 0; i < worktext.length; i++) {
@@ -121,7 +122,7 @@ window.addEventListener("wheel", handleWheelEvent);
 
 function handleWheelEvent(event) {
   if (event.deltaY > 0) {
-    if (this.scrollY > 100) {
+    if (this.scrollY > 0) {
       header.style.top = "-78px";
     }
   } else if (event.deltaY < 0) {

@@ -43,13 +43,14 @@ function animate(){
     me.update()
 }
 animate()
-const water = document.getElementById('waters').querySelector('.water')
 
 const skilltext = document.getElementsByClassName('skilltext');
 const worktext = document.getElementsByClassName('worktext');
-const basic = 90
+const moveleft = document.getElementById('moveleft')
+const moveright = document.getElementById('moveright')
 window.addEventListener('scroll', (e)=>{
-    console.log(water.style.transform);
+    moveleft.style.transform = `translateX(-${window.scrollY*0.8}px)`
+    moveright.style.transform = `translateX(${window.scrollY*0.8}px)`
     let value = (window.scrollY/4) * 0.8;
     let value2 = (window.scrollY/4) * 0.8;
     for(let i=0;i<worktext.length;i++){
@@ -110,7 +111,7 @@ window.addEventListener("wheel", handleWheelEvent);
 
 function handleWheelEvent(event) {
     if (event.deltaY > 0) {
-      if(this.scrollY > 100){
+      if(this.scrollY > 0){
           header.style.top = "-78px"
       }
     } else if (event.deltaY < 0) {

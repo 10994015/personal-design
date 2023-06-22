@@ -36,7 +36,10 @@
         </div>
     </div>
     <div class="banner">
-       
+       <div class="content">
+            <div class="left" id="moveright">HELLO </div>
+            <div class="right" id="moveleft">I'M LI CHENG-YAN</div>
+       </div>
     </div>
     <div class="experience" id="experience">
         <div class="marquee">

@@ -80,7 +80,7 @@ header > .icon {
   left: 0;
   min-width: 100%;
   transition: 0.3s;
-  transform: translate(-700px, -400px) scale(0.5);
+  transform: translate(-35vw, -20vw) scale(0.5);
 }
 
 .banner {
@@ -96,9 +96,15 @@ header > .icon {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-size: 10vw;
+  font-weight: 800;
+  color: #fff;
+  position: relative;
+  z-index: 5;
+  padding-top: 100px;
 }
-.banner > .content > img {
-  width: 500px;
+.banner > .content div {
+  text-shadow: 7px 7px #0d0d0d;
 }
 
 .experience {
