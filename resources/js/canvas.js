@@ -20,18 +20,18 @@ class Me{
         this.image = createPlayer('/images/me.png')
         this.frames = 0;
         this.idx = 0
-        this.currentCropWidth = 1500
+        this.currentCropWidth = 7076/17
     }
     draw(){
-        c.drawImage(this.image,this.currentCropWidth*this.frames,0,this.currentCropWidth,1500, this.position.x, this.position.y, this.width, this.height)
+        c.drawImage(this.image,this.currentCropWidth*this.frames,0,this.currentCropWidth,417, this.position.x, this.position.y, this.width, this.height)
     }
     update(){
         this.draw();
         this.idx ++ 
-        if(this.idx%12 === 0){
+        if(this.idx%18 === 0){
             this.frames++;
         }
-        if(this.frames >=9){
+        if(this.frames >17){
             this.frames = 0
         }
     }
@@ -44,12 +44,58 @@ function animate(){
 }
 animate()
 
-
+const skilltext = document.getElementsByClassName('skilltext');
 const worktext = document.getElementsByClassName('worktext');
 window.addEventListener('scroll', (e)=>{
-    let value = window.scrollY;
+    let value = window.scrollY-2000;
+    let value2 = window.scrollY -5000;
     console.log(value);
     for(let i=0;i<worktext.length;i++){
-        worktext[i].style.transform = `translateX(-${value*0.1}px)`
+        worktext[i].style.transform = `translateX(-${value*0.8}px)`
     }
+    for(let i=0;i<skilltext.length;i++){
+        skilltext[i].style.transform = `translateX(-${value2*0.8}px)`
+    }
+})
+const send  =document.getElementById('send');
+const form = document.getElementById('form')
+const letter = document.getElementById('letter')
+const contentTop = document.getElementById('contentTop')
+const letterBottom = document.getElementById('letterBottom')
+const letterTop = document.getElementById('letterTop')
+const formContainer = document.getElementById('formContainer')
+const thenk = document.getElementById('thenk')
+const speed1 = document.getElementById('speed1')
+const speed2 = document.getElementById('speed2')
+const speed3 = document.getElementById('speed3')
+const speed4 = document.getElementById('speed4')
+
+send.addEventListener('click', ()=>{
+    form.style.transform = 'translateY(950px)'
+    letter.style.paddingTop = '150px'
+    form.style.transition = '2s'
+    letter.style.transition = '2s'
+    setTimeout(()=>{
+        contentTop.style.display = "flex"
+        letterBottom.style.opacity = 0
+        letterBottom.style.transition = '1s'
+        letterTop.style.opacity = 0
+        letterTop.style.transition = '1s'
+    }, 2000)
+    setTimeout(()=>{
+        formContainer.classList.add('send');
+        thenk.style.top = '50%'
+        thenk.style.opacity =1
+    }, 3000)
+    setTimeout(()=>{
+        speed1.style.display = 'block'
+        speed2.style.display = 'block'
+        speed3.style.display = 'block'
+    }, 3700)
+    setTimeout(()=>{
+        speed4.style.display = 'block'
+    }, 3800)
+    setTimeout(()=>{
+        speed5.style.display = 'block'
+    }, 3900)
 })

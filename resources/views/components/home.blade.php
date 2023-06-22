@@ -108,7 +108,8 @@
         <canvas id="falling"></canvas>
         <div class="awards-container">
             <div class="title">
-                <h2>課外活動經歷</h2>
+                <img src="/images/award.png" width="150">
+                <h2>獎項經歷</h2>
             </div>
             <div class="awards-list">
                 @foreach($awards as $award)
@@ -121,11 +122,95 @@
     </div>
     <div class="works">
         <div class="work-marquee">
-            @for($i=0;$i<10;$i++)
+            @for($i=0;$i<15;$i++)
             <div class="worktext">WORK</div>
             @endfor
         </div>
+        <div class="work-disclaimer">
+            <div class="text">Due to NDA limitations, a selection of case studies is available, upon request, to recruiters and hiring managers only. Let’s talk!</div>
+            <a href="javascript:;">與我聯繫</a>
+        </div>
+        <div class="works-list">
+            @foreach($works as $idx=>$work)
+            <a href="@if($work['url'] != "") {{$work['url']}} @else javascript:; @endif" class="item" style="background-image:url('/images/works/{{$work['image']}}'); cursor:@if($work['url'] !='') pointer @else not-allowed @endif;">
+                <div class="tag" style="background-color:{{$colors[$idx%5]}}">{{$work['title']}}</div>
+                @if($work['url']=='')
+                <div class="lock">
+                    <img src="/images/lock.png" />
+                </div>
+                @endif
+            </a>
+            @endforeach
+        </div>
+        <div class="skills-marquee">
+            @for($i=0;$i<15;$i++)
+            <div class="skilltext">SKILL</div>
+            @endfor
+        </div>
+        <div class="skills">
+            @foreach($skills as $skill)
+            <div class="skill">
+                <div class="title">
+                    <span>{{$skill['skill']}}</span>
+                </div>
+               
+            </div>
+            @endforeach
+        </div>
     </div>
+    <div class="contacts">
+        <h2>與我聯繫</h2>
+        <div class="thenk" id="thenk"><h3>TAHNK YOU!</h3></div>
+        <div id="speed1"></div>
+        <div id="speed2"></div>
+        <div id="speed3"></div>
+        <div id="speed4"></div>
+        <div id="speed5"></div>
+        <div class="form-container" id="formContainer">
+            <div class="letter" id="letter">
+                <div class="top" id="letterTop">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                </div>
+                <div class="bottom" id="letterBottom">
+                    <div class="line"></div>
+                </div>
+                <div class="content-top" id="contentTop">
+                    <div class="left"></div>
+                    <div class="right"></div>
+                    <img src="/images/stamp.png" id="stamp" width="150" />
+                </div>
+                <div class="content">
+                </div>
+                <div class="form" id="form">
+                    <div class="top">
+                        <label for="">
+                            <span>Name*</span>
+                            <input type="text" />
+                        </label>
+                        <label for="">
+                            <span>Email*</span>
+                            <input type="Email" />
+                        </label>
+                    </div>
+                    <div class="bototm">
+                        <label for="">
+                            <span>Content*</span>
+                            <textarea name="" id="" ></textarea>
+                        </label>
+                    </div>
+                    <div class="btn">
+                        <label for="">
+                            <button id="send">SEND</button>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <span>Copyright Rubens Cantuni 2023</span>
+    </footer>
 </div>
 
 @push('scripts')
