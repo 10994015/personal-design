@@ -20,6 +20,64 @@ html, body {
   overflow: hidden;
 }
 
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 999999;
+  background-color: #FFCB46;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px #0d0d0d solid;
+  transition: 0.3s;
+}
+.loading > .content {
+  width: 75px;
+  height: 75px;
+  font-size: 24px;
+  font-weight: 900;
+  position: relative;
+}
+.loading > .content > .cover {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+  position: relative;
+  background-color: #FFCB46;
+  border-radius: 50%;
+}
+.loading > .content > .loading-content-border {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 77px;
+  height: 77px;
+  z-index: 3;
+  border: 1px #0d0d0d solid;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  animation: loading 1s linear infinite;
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
 .menubar {
   z-index: 9999;
   width: 64px;
@@ -190,6 +248,7 @@ header > .icon {
 .water-container {
   max-width: 100vw;
   overflow: hidden;
+  z-index: 5;
 }
 .water-container .waters {
   width: 100%;
@@ -349,10 +408,14 @@ header > .icon {
   display: flex;
   align-items: center;
   font-weight: 600;
+  letter-spacing: 1.5px;
 }
 .experience > .content > .personal > .paragraph > .basic h3 {
   font-size: 20px;
   text-align: justify;
+}
+.experience > .content > .personal > .paragraph > .basic span {
+  font-size: 24px;
 }
 .experience > .content > .personal > .paragraph i {
   margin-bottom: 15px;
@@ -1156,6 +1219,11 @@ header > .icon {
   margin: 0 auto;
   width: 100%;
 }
+@media screen and (max-width: 576px) {
+  .contacts > .form-container {
+    margin-top: 40px;
+  }
+}
 .contacts > .form-container.send {
   animation: send 1.5s linear;
   transform: translateY(1000px);
@@ -1181,6 +1249,11 @@ header > .icon {
   overflow: hidden;
   padding-top: 600px;
   padding-bottom: 369px;
+}
+@media screen and (max-width: 576px) {
+  .contacts > .form-container > .letter {
+    padding-bottom: 291px;
+  }
 }
 .contacts > .form-container > .letter > .top {
   display: flex;
@@ -1266,6 +1339,11 @@ header > .icon {
   z-index: 9;
   background-color: #fff;
 }
+@media screen and (max-width: 576px) {
+  .contacts > .form-container > .letter > .content {
+    height: 365px;
+  }
+}
 .contacts > .form-container > .letter > .form {
   position: relative;
   z-index: 6;
@@ -1291,8 +1369,18 @@ header > .icon {
   grid-column-gap: 20px;
   width: 100%;
 }
+@media screen and (max-width: 576px) {
+  .contacts > .form-container > .letter > .form .top {
+    flex-direction: column;
+  }
+}
 .contacts > .form-container > .letter > .form .top label {
   width: 50%;
+}
+@media screen and (max-width: 576px) {
+  .contacts > .form-container > .letter > .form .top label {
+    width: 100%;
+  }
 }
 .contacts > .form-container > .letter > .form .top label span {
   display: block;

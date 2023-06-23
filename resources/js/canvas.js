@@ -1,3 +1,11 @@
+const loading = document.getElementById('loading')
+window.onload = ()=>{
+    loading.style.opacity = 0
+    setTimeout(()=>{
+        loading.style.display = 'none'
+    }, 300)
+}
+
 const canvas = document.querySelector('#me')
 const c = canvas.getContext('2d')
 

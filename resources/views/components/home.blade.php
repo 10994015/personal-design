@@ -1,3 +1,5 @@
+
+
 <div class="wrapper" x-data="{menuOpen: false,}">
     <div x-bind:class="['menubar', menuOpen ? 'close' : '']"  x-on:click="menuOpen = !menuOpen;">
         <div x-bind:class="['line1', menuOpen ? 'close' : '']"></div>
@@ -5,11 +7,11 @@
         <div x-bind:class="['line3', menuOpen ? 'close' : '']"></div>
     </div>
     <div x-bind:class="['md-navigation', menuOpen ? 'open' : '']">
-        <a href="#experience">經歷</a>
-        <a href="#paper">論文</a>
-        <a href="#awards">獎項</a>
-        <a href="#works">作品</a>
-        <a href="#contacts">與我聯繫</a>
+        <a href="#experience" x-on:click="menuOpen = false">經歷</a>
+        <a href="#paper" x-on:click="menuOpen = false">論文</a>
+        <a href="#awards" x-on:click="menuOpen = false">獎項</a>
+        <a href="#works" x-on:click="menuOpen = false">作品</a>
+        <a href="#contacts" x-on:click="menuOpen = false">與我聯繫</a>
         <div class="icons">
             <a href="https://www.facebook.com/profile.php?id=100002935953804">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
@@ -209,7 +211,7 @@
         </div>
         <div class="works-list">
             @foreach($works as $idx=>$work)
-            <a href="@if($work['url'] != "") {{$work['url']}} @else javascript:; @endif" class="item" style="background-image:url('/images/works/{{$work['image']}}'); cursor:@if($work['url'] !='') pointer @else not-allowed @endif;">
+            <a href="@if($work['url'] != "") {{$work['url']}} @else javascript:; @endif" class="item" style="background-image:url('/images/works/{{$work['image']}}'); cursor:@if($work['url'] !='') pointer @else not-allowed @endif;" target="_blank">
                 <div class="tag" style="background-color:{{$colors[$idx%5]}}">{{$work['title']}}</div>
                 @if($work['url']=='')
                 <div class="lock">
@@ -220,7 +222,7 @@
             @endforeach
         </div>
         <div class="skills-marquee">
-            @for($i=0;$i<60;$i++)
+            @for($i=0;$i<80;$i++)
             <div class="skilltext">SKILL</div>
             @endfor
         </div>
