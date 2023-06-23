@@ -35,6 +35,10 @@ html,body{
     flex-direction: column;
     grid-row-gap: 4px;
     cursor: pointer;
+    display: none;
+    @media screen and (max-width:700px){
+        display: flex;
+    }
     &.close{
         animation: menu-close 1s linear;
         border-color: #fff;
@@ -100,6 +104,10 @@ html,body{
     z-index: 9998;
     grid-row-gap: 24px;
     transition: .5s;
+    display: none;
+    @media screen and (max-width:700px){
+        display: flex;
+    }
     &.open{
         right:0;
     }
@@ -133,7 +141,6 @@ header{
     left: 0%;
     right: 0%;
     transition: .3s;
-    display: none;
     @media screen and (max-width:966px){
         padding-left: 32px;
         padding-right: 32px;

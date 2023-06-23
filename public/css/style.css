@@ -37,6 +37,12 @@ html, body {
   flex-direction: column;
   grid-row-gap: 4px;
   cursor: pointer;
+  display: none;
+}
+@media screen and (max-width: 700px) {
+  .menubar {
+    display: flex;
+  }
 }
 .menubar.close {
   animation: menu-close 1s linear;
@@ -101,6 +107,12 @@ html, body {
   z-index: 9998;
   grid-row-gap: 24px;
   transition: 0.5s;
+  display: none;
+}
+@media screen and (max-width: 700px) {
+  .md-navigation {
+    display: flex;
+  }
 }
 .md-navigation.open {
   right: 0;
@@ -135,7 +147,6 @@ header {
   left: 0%;
   right: 0%;
   transition: 0.3s;
-  display: none;
 }
 @media screen and (max-width: 966px) {
   header {
