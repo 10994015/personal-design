@@ -690,6 +690,27 @@ header{
     right: 0%;
     overflow: hidden;
     padding-bottom: 240px;
+    @media screen and (max-width:494px){
+        padding-bottom: 300px;
+    }
+    @media screen and (max-width:452px){
+        padding-bottom: 320px;
+    }
+    @media screen and (max-width:430px){
+        padding-bottom: 360px;
+    }
+    @media screen and (max-width:423px){
+        padding-bottom: 420px;
+    }
+    @media screen and (max-width:365px){
+        padding-bottom: 500px;
+    }
+    @media screen and (max-width:306px){
+        padding-bottom: 600px;
+    }
+    @media screen and (max-width:292px){
+        padding-bottom: 800px;
+    }
     >.awards-container{
         z-index: 0;
         width: 100vw;

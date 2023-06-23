@@ -201,7 +201,7 @@
     </div>
     <div class="works" id="works">
         <div class="work-marquee">
-            @for($i=0;$i<30;$i++)
+            @for($i=0;$i<45;$i++)
             <div class="worktext">WORK</div>
             @endfor
         </div>
