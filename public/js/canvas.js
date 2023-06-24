@@ -71,7 +71,6 @@ var moveleft = document.getElementById('moveleft');
 var moveright = document.getElementById('moveright');
 var accordionsList = document.getElementsByClassName('accordions-list');
 window.addEventListener('scroll', function (e) {
-  console.log(window.scrollY);
   if (window.scrollY >= 1000) {
     var _loop = function _loop(i) {
       setTimeout(function () {

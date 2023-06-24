@@ -254,29 +254,44 @@
                 </div>
                 <div class="content">
                 </div>
-                <div class="form" id="form">
+                <form class="form" id="form" x-data="{
+                    name:'',
+                    email:'',
+                    content:'',
+                    snedMail(){
+                        console.log(444)
+                        const form = new FormData();
+                        form.append('name', this.name);
+                        form.append('email', this.email);
+                        form.append('content', this.content);
+                        form.append('_method', 'POST');
+                        axios.post('/api/senaMail', form).then(res=>{
+                            console.log(123)
+                        })
+                    }
+                }">
                     <div class="top">
                         <label for="">
                             <span>Name*</span>
-                            <input type="text" />
+                            <input type="text" x-model="name" />
                         </label>
                         <label for="">
                             <span>Email*</span>
-                            <input type="Email" />
+                            <input type="Email" x-model="email" />
                         </label>
                     </div>
                     <div class="bototm">
                         <label for="">
                             <span>Content*</span>
-                            <textarea name="" id="" ></textarea>
+                            <textarea x-model="content" ></textarea>
                         </label>
                     </div>
                     <div class="btn">
                         <label for="">
-                            <button id="send">SEND</button>
+                            <button id="send" type="button" x-on:click="snedMail()">SEND</button>
                         </label>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
@@ -290,6 +305,5 @@
     var confettiSettings = { target: 'falling', size:'1.8' };
     var confetti = new ConfettiGenerator(confettiSettings);
     confetti.render();
-    
 </script>
 @endpush
