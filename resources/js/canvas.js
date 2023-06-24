@@ -56,7 +56,55 @@ const skilltext = document.getElementsByClassName('skilltext');
 const worktext = document.getElementsByClassName('worktext');
 const moveleft = document.getElementById('moveleft')
 const moveright = document.getElementById('moveright')
+const accordionsList = document.getElementsByClassName('accordions-list')
 window.addEventListener('scroll', (e)=>{
+    console.log(window.scrollY);
+    if(window.scrollY >= 1000){
+        for(let i=0;i<accordionsList.length;i++){
+            setTimeout(()=>{
+                accordionsList[i].classList.add('fade-in')
+            }, i*100)
+        }
+    }
+    if(window.scrollY >= 1700){
+        document.querySelector('.paper-container').classList.add('fade-in')
+    }
+    if(window.scrollY >= 2700){
+        document.getElementById('award-title').classList.add('fade-in')
+    }
+    if(window.scrollY >= 2900){
+        document.querySelector('.awards-list').classList.add('fade-in')
+        for(let i=0;i<document.querySelector('.awards-list').querySelectorAll('.item').length;i++){
+            setTimeout(()=>{
+                document.querySelector('.awards-list').querySelectorAll('.item')[i].classList.add('fade-in')
+            }, i*100)
+        }
+    }
+    if(window.scrollY >= 4050){
+        document.querySelector('.work-disclaimer').classList.add('fade-in')
+    }
+    if(window.scrollY >= 4500){
+        for(let i=0;i<document.querySelector('.works-list').querySelectorAll('a').length;i++){
+            setTimeout(()=>{
+                document.querySelector('.works-list').querySelectorAll('a')[i].classList.add('fade-in')
+            }, i*100)
+        }
+    }
+    if(window.scrollY >= 7100){
+        for(let i=0;i<document.querySelector('.skills').querySelectorAll('.skill').length;i++){
+            setTimeout(()=>{
+                document.querySelector('.skills').querySelectorAll('.skill')[i].classList.add('fade-in')
+            }, i*10)
+        }
+    }
+    if(window.scrollY >= 7600){
+        document.getElementById('contacts2').querySelector('h2').classList.add('fade-in')
+    }
+    if(window.scrollY >= 7900){
+        formContainer.classList.add('fade-in')
+    }
+
+
     moveleft.style.transform = `translateX(-${window.scrollY*0.8}px)`
     moveright.style.transform = `translateX(${window.scrollY*0.8}px)`
     let value = (window.scrollY/4) * 0.8;

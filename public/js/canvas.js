@@ -69,16 +69,74 @@ var skilltext = document.getElementsByClassName('skilltext');
 var worktext = document.getElementsByClassName('worktext');
 var moveleft = document.getElementById('moveleft');
 var moveright = document.getElementById('moveright');
+var accordionsList = document.getElementsByClassName('accordions-list');
 window.addEventListener('scroll', function (e) {
+  console.log(window.scrollY);
+  if (window.scrollY >= 1000) {
+    var _loop = function _loop(i) {
+      setTimeout(function () {
+        accordionsList[i].classList.add('fade-in');
+      }, i * 100);
+    };
+    for (var i = 0; i < accordionsList.length; i++) {
+      _loop(i);
+    }
+  }
+  if (window.scrollY >= 1700) {
+    document.querySelector('.paper-container').classList.add('fade-in');
+  }
+  if (window.scrollY >= 2700) {
+    document.getElementById('award-title').classList.add('fade-in');
+  }
+  if (window.scrollY >= 2900) {
+    document.querySelector('.awards-list').classList.add('fade-in');
+    var _loop2 = function _loop2(_i) {
+      setTimeout(function () {
+        document.querySelector('.awards-list').querySelectorAll('.item')[_i].classList.add('fade-in');
+      }, _i * 100);
+    };
+    for (var _i = 0; _i < document.querySelector('.awards-list').querySelectorAll('.item').length; _i++) {
+      _loop2(_i);
+    }
+  }
+  if (window.scrollY >= 4050) {
+    document.querySelector('.work-disclaimer').classList.add('fade-in');
+  }
+  if (window.scrollY >= 4500) {
+    var _loop3 = function _loop3(_i2) {
+      setTimeout(function () {
+        document.querySelector('.works-list').querySelectorAll('a')[_i2].classList.add('fade-in');
+      }, _i2 * 100);
+    };
+    for (var _i2 = 0; _i2 < document.querySelector('.works-list').querySelectorAll('a').length; _i2++) {
+      _loop3(_i2);
+    }
+  }
+  if (window.scrollY >= 7100) {
+    var _loop4 = function _loop4(_i3) {
+      setTimeout(function () {
+        document.querySelector('.skills').querySelectorAll('.skill')[_i3].classList.add('fade-in');
+      }, _i3 * 10);
+    };
+    for (var _i3 = 0; _i3 < document.querySelector('.skills').querySelectorAll('.skill').length; _i3++) {
+      _loop4(_i3);
+    }
+  }
+  if (window.scrollY >= 7600) {
+    document.getElementById('contacts2').querySelector('h2').classList.add('fade-in');
+  }
+  if (window.scrollY >= 7900) {
+    formContainer.classList.add('fade-in');
+  }
   moveleft.style.transform = "translateX(-".concat(window.scrollY * 0.8, "px)");
   moveright.style.transform = "translateX(".concat(window.scrollY * 0.8, "px)");
   var value = window.scrollY / 4 * 0.8;
   var value2 = window.scrollY / 4 * 0.8;
-  for (var i = 0; i < worktext.length; i++) {
-    worktext[i].style.transform = "translateX(-".concat(value, "px)");
+  for (var _i4 = 0; _i4 < worktext.length; _i4++) {
+    worktext[_i4].style.transform = "translateX(-".concat(value, "px)");
   }
-  for (var _i = 0; _i < skilltext.length; _i++) {
-    skilltext[_i].style.transform = "translateX(-".concat(value2, "px)");
+  for (var _i5 = 0; _i5 < skilltext.length; _i5++) {
+    skilltext[_i5].style.transform = "translateX(-".concat(value2, "px)");
   }
 });
 var send = document.getElementById('send');

@@ -20,7 +20,7 @@ class HomeController extends Controller
                     "與臺灣碳材料學會合作幫他們製作前後台官方網站。",
                     "與中原大學商業設計系學生合作，參與畢制專題，負責Web部分。",
                     "與金恩公司合作，負責設計與撰寫充電車的API。",
-                    "與朋友合作，製作Web遊戲及後台管理系統",
+                    "與朋友合作，製作Web遊戲及後台管理系統。",
                     "與學弟妹分享JSP知識，並教導使用JSP與資料庫進行溝通製作學校期末專題購物網頁。",
                 ]
             ],
@@ -40,7 +40,7 @@ class HomeController extends Controller
                 'role'=>'Laravel PHP工程師',
                 'address'=>'台北市中山區',
                 'contents'=>[
-                    "負責用Laravel寫出SASS平台的API。"
+                    "負責用Laravel寫出SaaS平台的API。"
                 ]
             ],
             [
@@ -49,10 +49,10 @@ class HomeController extends Controller
                 'role'=>'網頁工程師',
                 'address'=>'新竹縣竹東市',
                 'contents'=>[
-                    "使用JavaScript、PHP、MySQL撰寫網頁前端及後端開發",
-                    "設計網頁排版包含電腦及手機版",
-                    "參與網頁SEO規劃",
-                    "協助專案經理進行窗口溝通",
+                    "使用JavaScript、PHP、MySQL撰寫網頁前端及後端開發。",
+                    "設計網頁排版包含電腦及手機版。",
+                    "參與網頁SEO規劃。",
+                    "協助專案經理進行窗口溝通。",
                 ]
             ],
             [
@@ -61,7 +61,7 @@ class HomeController extends Controller
                 'role'=>'Python家教',
                 'address'=>'桃園市中壢區',
                 'contents'=>[
-                    "一對一教導大四特殊生基礎Python程式設計撰寫且協助修過Python課程",
+                    "一對一教導大四特殊生基礎Python程式設計撰寫且協助修過Python課程。",
                 ]
             ],
             [
@@ -70,10 +70,10 @@ class HomeController extends Controller
                 'role'=>'學習護照講師、課程助教',
                 'address'=>'桃園市中壢區',
                 'contents'=>[
-                    "課後輔導中原大學學生基礎程式概念",
-                    "擔任網頁前端助教，指導學生HTML、CSS、JavaScript基本程式知識",
-                    "擔任Python課程助教，指導學生Python基本程式知識",
-                    "協助老師課堂上的運作",
+                    "課後輔導中原大學學生基礎程式概念。",
+                    "擔任網頁前端助教，指導學生HTML、CSS、JavaScript基本程式知識。",
+                    "擔任Python課程助教，指導學生Python基本程式知識。",
+                    "協助老師課堂上的運作。",
                 ]
             ],
             [
@@ -82,7 +82,7 @@ class HomeController extends Controller
                 'role'=>'國中數學輔導老師',
                 'address'=>'桃園市桃園區',
                 'contents'=>[
-                    "因為大學學測數學滿級分以及指考數甲88分(頂標)，因此有對數學有興趣，並一對一輔導國中生數理以及小班制教學",
+                    "因為大學學測數學滿級分以及指考數甲88分(頂標)，因此有對數學有興趣，並一對一輔導國中生數理以及小班制教學。",
                 ]
             ],
             
@@ -129,7 +129,7 @@ class HomeController extends Controller
                 'url'=>'',
             ],
             [
-                'title'=>'房子肉家俱',
+                'title'=>'房子ROW家俱',
                 'image'=>'fzr.jpg',
                 'url'=>'',
             ],
@@ -160,7 +160,7 @@ class HomeController extends Controller
             ],
             [
                 'title'=>'憶旺智慧',
-                'image'=>'marvel.cms.jpg',
+                'image'=>'evone.jpg',
                 'url'=>'',
             ],
             [
@@ -169,7 +169,7 @@ class HomeController extends Controller
                 'url'=>'',
             ],
             [
-                'title'=>'7ZIP',
+                'title'=>'7.ZIP',
                 'image'=>'7zip.jpg',
                 'url'=>'https://10994015.github.io/7zip/',
             ],

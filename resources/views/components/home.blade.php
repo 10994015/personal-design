@@ -98,16 +98,8 @@
                     <p>來自中原大學碩士，從大二開始學習基本網頁開發，由基礎JSP開始學習，直到現在主要使用PHP以及JavaScript來進行開發。碩士論文對GAN(生成對抗網路)與室內設計的結合進行研究，<br>熱愛嘗試新的事物，永遠把自己當成初學者向所有人學習。</p>
                     <div class="basic">
                         <h3>姓名:</h3>
-                        <span>李承諺(Li-Cheng Yan)</span>
+                        <span>李承諺(Li Cheng-Yan)</span>
                     </div>
-                    {{-- <div class="basic">
-                        <h3>出生日期:</h3>
-                        <span>1997/08/22</span>
-                    </div>
-                    <div class="basic">
-                        <h3>家鄉:</h3>
-                        <span>桃園市桃園區</span>
-                    </div> --}}
                     <div class="basic">
                         <h3>電子郵件:</h3>
                         <span>cy9577@gmail.com</span>
@@ -152,7 +144,7 @@
             <div class="paper-cover">
                 <div class="left">
                     <div class="paper-img">
-                        <img src="/images/paper.jpg" />
+                        <img src="/images/paper.png" />
                     </div>
                 </div>
                 <div class="right">
@@ -186,13 +178,13 @@
     <div class="awards" id="awards">
         <canvas id="falling"></canvas>
         <div class="awards-container">
-            <div class="title">
+            <div class="title" id="award-title">
                 <img src="/images/award.png" width="150">
                 <h2>獎項經歷</h2>
             </div>
             <div class="awards-list">
-                @foreach($awards as $award)
-                <div class="item">
+                @foreach($awards as $key=>$award)
+                <div class="item" >
                     <div>{{$award}}</div>
                 </div>
                 @endforeach
@@ -206,12 +198,12 @@
             @endfor
         </div>
         <div class="work-disclaimer">
-            <div class="text">Due to NDA limitations, a selection of case studies is available, upon request, to recruiters and hiring managers only. Let’s talk!</div>
+            <div class="text">由於部分專案受到保密協議的限制，暫不開放。</div>
             <a href="#contacts">與我聯繫</a>
         </div>
         <div class="works-list">
             @foreach($works as $idx=>$work)
-            <a href="@if($work['url'] != "") {{$work['url']}} @else javascript:; @endif" class="item" style="background-image:url('/images/works/{{$work['image']}}'); cursor:@if($work['url'] !='') pointer @else not-allowed @endif;" target="_blank">
+            <a href="@if($work['url'] != "") {{$work['url']}}@else javascript:; @endif" class="item" style="background-image:url('/images/works/{{$work['image']}}'); cursor:@if($work['url'] !='') pointer @else not-allowed @endif;" @if($work['url'] !='') target="_blank" @endif>
                 <div class="tag" style="background-color:{{$colors[$idx%5]}}">{{$work['title']}}</div>
                 @if($work['url']=='')
                 <div class="lock">
@@ -227,8 +219,8 @@
             @endfor
         </div>
         <div class="skills">
-            @foreach($skills as $skill)
-            <div class="skill">
+            @foreach($skills as $key=>$skill)
+            <div class="skill" >
                 <div class="title">
                     <span>{{$skill['skill']}}</span>
                 </div>
@@ -238,7 +230,7 @@
         </div>
     </div>
     <div id="contacts"></div>
-    <div class="contacts" id="contacts">
+    <div class="contacts" id="contacts2">
         <h2>與我聯繫</h2>
         <div class="thenk" id="thenk"><h3>TAHNK YOU!</h3></div>
         <div id="speed1"></div>
