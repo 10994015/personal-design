@@ -762,42 +762,19 @@ header > .icon {
   left: 0%;
   right: 0%;
   overflow: hidden;
-  padding-bottom: 240px;
+  padding-bottom: 200px;
 }
-@media screen and (max-width: 494px) {
+@media screen and (max-width: 768px) {
   .awards {
-    padding-bottom: 300px;
+    padding-bottom: 160px;
   }
 }
-@media screen and (max-width: 452px) {
-  .awards {
-    padding-bottom: 320px;
-  }
-}
-@media screen and (max-width: 430px) {
-  .awards {
-    padding-bottom: 360px;
-  }
-}
-@media screen and (max-width: 423px) {
-  .awards {
-    padding-bottom: 420px;
-  }
-}
-@media screen and (max-width: 365px) {
-  .awards {
-    padding-bottom: 500px;
-  }
-}
-@media screen and (max-width: 306px) {
-  .awards {
-    padding-bottom: 600px;
-  }
-}
-@media screen and (max-width: 292px) {
-  .awards {
-    padding-bottom: 800px;
-  }
+.awards > #falling {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 .awards > .awards-container {
   z-index: 0;
@@ -809,10 +786,6 @@ header > .icon {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  right: 0%;
   padding-left: 12px;
   padding-right: 19px;
 }
