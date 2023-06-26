@@ -364,6 +364,8 @@ header > .icon {
 }
 .experience > .content > .personal > .image > canvas {
   width: 100%;
+  max-width: 100%;
+  max-height: 100%;
   transform: translate(8px, 25px);
 }
 .experience > .content > .personal > .balloon-tip {
@@ -890,6 +892,16 @@ header > .icon {
   background-color: #FFCB46;
   border: 2px #0d0d0d solid;
 }
+@media screen and (max-width: 1000px) {
+  .works > .work-marquee {
+    height: 8vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  .works > .work-marquee {
+    height: 16vw;
+  }
+}
 .works > .work-marquee > div {
   width: 100%;
   color: #0d0d0d;
@@ -899,6 +911,17 @@ header > .icon {
   line-height: 1;
   font-weight: 900;
   transform: translateX(-100px);
+}
+@media screen and (max-width: 1000px) {
+  .works > .work-marquee > div {
+    margin-top: 0;
+    font-size: 4.2vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  .works > .work-marquee > div {
+    font-size: 12vw;
+  }
 }
 .works > .work-disclaimer {
   width: 100%;
@@ -1060,6 +1083,11 @@ header > .icon {
   position: relative;
   z-index: 0;
 }
+@media screen and (max-width: 1000px) {
+  .works > .skills-marquee {
+    height: 16vw;
+  }
+}
 .works > .skills-marquee > div {
   width: 100%;
   color: #0d0d0d;
@@ -1069,6 +1097,17 @@ header > .icon {
   line-height: 1;
   font-weight: 900;
   transform: translateX(-100px);
+}
+@media screen and (max-width: 1000px) {
+  .works > .skills-marquee > div {
+    margin-top: 0;
+    font-size: 4.2vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  .works > .skills-marquee > div {
+    font-size: 12vw;
+  }
 }
 .works > .skills {
   display: grid;
@@ -1114,7 +1153,6 @@ header > .icon {
   width: 180px;
   font-size: 18px;
   font-weight: 600;
-  background-image: url("/images/skill.png");
   position: relative;
   text-align: center;
   border: 2px solid #fff;
