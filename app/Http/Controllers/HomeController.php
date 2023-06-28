@@ -34,15 +34,15 @@ class HomeController extends Controller
                     "協助輔仁大學大二學生順利修過PHP程式課程，並分享程式語言基本知識。",
                 ]
             ],
-            [
-                'date'=>'2022',
-                'company'=>'一踢科技',
-                'role'=>'Laravel PHP工程師',
-                'address'=>'台北市中山區',
-                'contents'=>[
-                    "負責用Laravel寫出SaaS平台的API。"
-                ]
-            ],
+            // [
+            //     'date'=>'2022',
+            //     'company'=>'一踢科技',
+            //     'role'=>'Laravel PHP工程師',
+            //     'address'=>'台北市中山區',
+            //     'contents'=>[
+            //         "負責用Laravel寫出SaaS平台的API。"
+            //     ]
+            // ],
             [
                 'date'=>'2021-2022',
                 'company'=>'憶旺智慧股份有限公司',
@@ -161,7 +161,7 @@ class HomeController extends Controller
             [
                 'title'=>'憶旺智慧',
                 'image'=>'evone.jpg',
-                'url'=>'',
+                'url'=>'https://www.evoneic.com/',
             ],
             [
                 'title'=>'論文問卷系統',
