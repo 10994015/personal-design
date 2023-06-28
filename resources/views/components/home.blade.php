@@ -86,9 +86,9 @@
         </div>
         <div class="content">
             <div class="personal">
-                <div class="image">
+                <div class="image" >
+                    <img src="/images/head.png" />
                     <canvas id="me" style="display:none"></canvas>
-                    <img src="/images/me.gif" />
                 </div>
                 <div class="balloon-tip">
                     <img src="/images/balloon_tip.svg" alt="">

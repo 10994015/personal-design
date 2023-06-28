@@ -20,7 +20,6 @@ var canvas = document.querySelector('#me');
 var c = canvas.getContext('2d');
 canvas.width = 340;
 canvas.height = 340;
-c.arc(170, 170, 80, 0, 2 * Math.PI);
 var createPlayer = function createPlayer(imgSrc) {
   var image = new Image();
   image.src = imgSrc;

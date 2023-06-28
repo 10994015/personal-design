@@ -11,7 +11,6 @@ const c = canvas.getContext('2d')
 
 canvas.width = 340
 canvas.height = 340
-c.arc(170, 170, 80, 0, 2 * Math.PI);
 const createPlayer = (imgSrc)=>{
     const image = new Image();
     image.src = imgSrc
