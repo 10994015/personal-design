@@ -87,7 +87,7 @@
         <div class="content">
             <div class="personal">
                 <div class="image">
-                    {{-- <canvas id="me"></canvas> --}}
+                    <canvas id="me" style="display:block"></canvas>
                     <img src="/images/me.gif" />
                 </div>
                 <div class="balloon-tip">
