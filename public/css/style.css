@@ -369,7 +369,7 @@ header > .icon {
   min-width: 340px;
   height: 340px;
   border-radius: 50%;
-  background-color: #F0F0F0;
+  border: 1px #0D0D0D solid;
   overflow: hidden;
 }
 .experience > .content > .personal > .image > img {
@@ -393,7 +393,7 @@ header > .icon {
   width: 100%;
   max-width: 100%;
   max-height: 100%;
-  transform: translate(8px, 25px);
+  border-radius: 50%;
 }
 .experience > .content > .personal > .balloon-tip {
   margin-left: 15px;

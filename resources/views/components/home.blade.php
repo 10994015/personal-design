@@ -87,7 +87,7 @@
         <div class="content">
             <div class="personal">
                 <div class="image" >
-                    <div class="border"></div>
+                    {{-- <div class="border"></div> --}}
                     {{-- <img src="/images/head.png" /> --}}
                     <canvas id="me" ></canvas>
                 </div>
