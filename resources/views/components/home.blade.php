@@ -87,8 +87,9 @@
         <div class="content">
             <div class="personal">
                 <div class="image" >
-                    <img src="/images/head.png" />
-                    <canvas id="me" style="display:none"></canvas>
+                    <div class="border"></div>
+                    {{-- <img src="/images/head.png" /> --}}
+                    <canvas id="me" ></canvas>
                 </div>
                 <div class="balloon-tip">
                     <img src="/images/balloon_tip.svg" alt="">
@@ -184,7 +185,7 @@
             @endfor
         </div>
         <div class="work-disclaimer">
-            <div class="text">由於部分專案受到保密協議的限制，暫不開放。</div>
+            <div class="text">由於部分專案為後臺或受到保密協議的限制，暫不開放。</div>
             <a href="#contacts">與我聯繫</a>
         </div>
         <div class="works-list">
