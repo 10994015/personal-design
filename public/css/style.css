@@ -369,8 +369,9 @@ header > .icon {
   min-width: 340px;
   height: 340px;
   border-radius: 50%;
-  border: 1px #0D0D0D solid;
+  border: 3px #0D0D0D solid;
   overflow: hidden;
+  background-color: #f1f1f1;
 }
 .experience > .content > .personal > .image > img {
   width: 100%;
