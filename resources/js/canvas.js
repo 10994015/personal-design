@@ -9,8 +9,11 @@ window.onload = ()=>{
 const canvas = document.querySelector('#me')
 const c = canvas.getContext('2d')
 
+
 canvas.width = 340
 canvas.height = 340
+c.fillStyle = "#f0f0f0"; /* 這裡是背景顏色的十六進制碼 */
+  c.fillRect(0, 0, canvas.width, canvas.height);
 const createPlayer = (imgSrc)=>{
     const image = new Image();
     image.src = imgSrc
@@ -21,8 +24,8 @@ class Me{
         this.width = 340
         this.height = 340
         this.position = {
-            x:0,
-            y:0,
+            x:8,
+            y:25,
         }
         this.image = createPlayer('/images/me.png')
         this.frames = 0;
