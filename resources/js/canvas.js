@@ -60,20 +60,20 @@ const moveleft = document.getElementById('moveleft')
 const moveright = document.getElementById('moveright')
 const accordionsList = document.getElementsByClassName('accordions-list')
 window.addEventListener('scroll', (e)=>{
-    if(window.scrollY >= 1000){
+    if(window.scrollY >= 900){
         for(let i=0;i<accordionsList.length;i++){
             setTimeout(()=>{
                 accordionsList[i].classList.add('fade-in')
             }, i*100)
         }
     }
-    if(window.scrollY >= 1700){
+    if(window.scrollY >= 1600){
         document.querySelector('.paper-container').classList.add('fade-in')
     }
-    if(window.scrollY >= 2700){
+    if(window.scrollY >= 2600){
         document.getElementById('award-title').classList.add('fade-in')
     }
-    if(window.scrollY >= 2900){
+    if(window.scrollY >= 2800){
         document.querySelector('.awards-list').classList.add('fade-in')
         for(let i=0;i<document.querySelector('.awards-list').querySelectorAll('.item').length;i++){
             setTimeout(()=>{
@@ -81,27 +81,27 @@ window.addEventListener('scroll', (e)=>{
             }, i*100)
         }
     }
-    if(window.scrollY >= 4050){
+    if(window.scrollY >= 3950){
         document.querySelector('.work-disclaimer').classList.add('fade-in')
     }
-    if(window.scrollY >= 4500){
+    if(window.scrollY >= 4400){
         for(let i=0;i<document.querySelector('.works-list').querySelectorAll('a').length;i++){
             setTimeout(()=>{
                 document.querySelector('.works-list').querySelectorAll('a')[i].classList.add('fade-in')
             }, i*100)
         }
     }
-    if(window.scrollY >= 7100){
+    if(window.scrollY >= 7000){
         for(let i=0;i<document.querySelector('.skills').querySelectorAll('.skill').length;i++){
             setTimeout(()=>{
                 document.querySelector('.skills').querySelectorAll('.skill')[i].classList.add('fade-in')
             }, i*10)
         }
     }
-    if(window.scrollY >= 7600){
+    if(window.scrollY >= 7500){
         document.getElementById('contacts2').querySelector('h2').classList.add('fade-in')
     }
-    if(window.scrollY >= 7900){
+    if(window.scrollY >= 7800){
         formContainer.classList.add('fade-in')
     }
 

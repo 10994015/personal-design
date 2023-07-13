@@ -9,21 +9,21 @@ class HomeController extends Controller
     public function index(){
         $fake = 'bullet point icon Designing an educational platform for gamers from gamers, with particular focus on the content streaming features.';
         $jobs = [
-            [
-                'date'=>'2022-2023',
-                'company'=>'自由接案',
-                'role'=>'Freelancer',
-                'address'=>'遠端',
-                'contents'=>[
-                    "在畢業之後利用等當兵的時間自由接案，學習新技術、規劃時間、吸取經驗。",
-                    "與赫成補習班合作幫他們製作前後台官方網站。",
-                    "與臺灣碳材料學會合作幫他們製作前後台官方網站。",
-                    "與中原大學商業設計系學生合作，參與畢制專題，負責Web部分。",
-                    "與金恩公司合作，負責設計與撰寫充電車的API。",
-                    "與朋友合作，製作Web遊戲及後台管理系統。",
-                    "與學弟妹分享JSP知識，並教導使用JSP與資料庫進行溝通製作學校期末專題購物網頁。",
-                ]
-            ],
+            // [
+            //     'date'=>'2022-2023',
+            //     'company'=>'自由接案',
+            //     'role'=>'Freelancer',
+            //     'address'=>'遠端',
+            //     'contents'=>[
+            //         "在畢業之後利用等當兵的時間自由接案，學習新技術、規劃時間、吸取經驗。",
+            //         "與赫成補習班合作幫他們製作前後台官方網站。",
+            //         "與臺灣碳材料學會合作幫他們製作前後台官方網站。",
+            //         "與中原大學商業設計系學生合作，參與畢制專題，負責Web部分。",
+            //         "與金恩公司合作，負責設計與撰寫充電車的API。",
+            //         "與朋友合作，製作Web遊戲及後台管理系統。",
+            //         "與學弟妹分享JSP知識，並教導使用JSP與資料庫進行溝通製作學校期末專題購物網頁。",
+            //     ]
+            // ],
             [
                 'date'=>'2022-2023',
                 'company'=>'輔仁大學學生家教',
@@ -74,6 +74,7 @@ class HomeController extends Controller
                     "擔任網頁前端助教，指導學生HTML、CSS、JavaScript基本程式知識。",
                     "擔任Python課程助教，指導學生Python基本程式知識。",
                     "協助老師課堂上的運作。",
+                    "與學弟妹分享JSP知識，並教導使用JSP與資料庫進行溝通製作學校期末專題購物網頁。",
                 ]
             ],
             [
@@ -131,7 +132,7 @@ class HomeController extends Controller
             [
                 'title'=>'房子ROW家俱',
                 'image'=>'fzr.jpg',
-                'url'=>'',
+                'url'=>'https://shop.jiousaio.com',
             ],
             [
                 'title'=>'九霄空間設計',

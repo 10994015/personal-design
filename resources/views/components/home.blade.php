@@ -181,11 +181,11 @@
     <div class="works" id="works">
         <div class="work-marquee">
             @for($i=0;$i<45;$i++)
-            <div class="worktext">WORK</div>
+            <div class="worktext">PORTFOLIO</div>
             @endfor
         </div>
         <div class="work-disclaimer">
-            <div class="text">由於部分專案為後臺或受到保密協議的限制，暫不開放。</div>
+            <div class="text">由於部分專案為與他人合作或後臺管理系統，暫不開放連結。</div>
             <a href="#contacts">與我聯繫</a>
         </div>
         <div class="works-list">
