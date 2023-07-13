@@ -91,7 +91,7 @@
                 </div>
                 <div class="paragraph">
                     <i>"I'm the man who'll become the pirate king!"</i>
-                    <p>來自中原大學碩士，從大二開始學習基本網頁開發，由基礎JSP開始學習，直到現在主要使用PHP以及JavaScript來進行開發。碩士論文對GAN(生成對抗網路)與室內設計的結合進行研究，<br>熱愛嘗試新的事物，永遠把自己當成初學者向所有人學習。</p>
+                    <p>來自中原大學碩士，從大二開始學習基本網頁開發，由基礎JSP開始學習，直到現在主要使用PHP以及JavaScript來進行開發。碩士論文對GAN(生成對抗網路)與室內設計的結合進行研究，<br>熱愛嘗試新的事物，永遠將所有人當成學習的對象。</p>
                     <div class="basic">
                         <h3>姓名:</h3>
                         <span>李承諺(Li Cheng-Yan)</span>
