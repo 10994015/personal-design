@@ -132,7 +132,7 @@ class HomeController extends Controller
             [
                 'title'=>'房子ROW家俱',
                 'image'=>'fzr.jpg',
-                'url'=>'https://shop.jiousaio.com',
+                'url'=>'http://3.1.217.108/',
             ],
             [
                 'title'=>'九霄空間設計',
