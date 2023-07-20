@@ -245,14 +245,12 @@
                     email:'',
                     content:'',
                     snedMail(){
-                        console.log(444)
                         const form = new FormData();
                         form.append('name', this.name);
                         form.append('email', this.email);
                         form.append('content', this.content);
                         form.append('_method', 'POST');
                         axios.post('/api/senaMail', form).then(res=>{
-                            console.log(123)
                         })
                     }
                 }">
