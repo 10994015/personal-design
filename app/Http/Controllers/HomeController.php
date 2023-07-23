@@ -97,16 +97,11 @@ class HomeController extends Controller
             '101學年度遠哲科學競賽第二名',
             '101學年度數學金頭腦競賽第二名'
         ];
-        $works = [
+        $public = [
             [
                 'title'=>'赫成教育',
                 'image'=>'hecheng.png',
                 'url'=>'https://hechengschool.com/',
-            ],
-            [
-                'title'=>'赫成教育後臺管理',
-                'image'=>'hecheng.cms.jpg',
-                'url'=>'',
             ],
             [
                 'title'=>'臺灣碳材料學會',
@@ -114,19 +109,9 @@ class HomeController extends Controller
                 'url'=>'https://carboncst.com/',
             ],
             [
-                'title'=>'臺灣碳材料學會後臺管理',
-                'image'=>'carbon.cms.jpg',
-                'url'=>'',
-            ],
-            [
                 'title'=>'冰芬文教',
                 'image'=>'benfen.png',
                 'url'=>'https://ice-finland.club/',
-            ],
-            [
-                'title'=>'冰芬文教後臺管理',
-                'image'=>'benfen.cms.jpg',
-                'url'=>'',
             ],
             [
                 'title'=>'房子ROW家俱',
@@ -149,24 +134,14 @@ class HomeController extends Controller
                 'url'=>'https://10994015.github.io/odd-city/',
             ],
             [
-                'title'=>'漫威衛教益智遊戲',
+                'title'=>'中原大學衛保組衛教小遊戲',
                 'image'=>'marvel.jpg',
                 'url'=>'https://marvel.jiousaio.com/',
-            ],
-            [
-                'title'=>'漫威衛教抽獎後台',
-                'image'=>'marvel.cms.jpg',
-                'url'=>'',
             ],
             [
                 'title'=>'憶旺智慧',
                 'image'=>'evone.jpg',
                 'url'=>'https://www.evoneic.com/',
-            ],
-            [
-                'title'=>'論文問卷系統',
-                'image'=>'ads.jpg',
-                'url'=>'',
             ],
             [
                 'title'=>'7.ZIP',
@@ -178,14 +153,41 @@ class HomeController extends Controller
                 'image'=>'tripleE.jpg',
                 'url'=>'https://10994015.github.io/tripleE/',
             ],
+        ];
+        $private = [
+            [
+                'title'=>'赫成教育後臺管理',
+                'image'=>'hecheng.cms.jpg',
+                'url'=>'',
+            ],
+            [
+                'title'=>'臺灣碳材料學會後臺管理',
+                'image'=>'carbon.cms.jpg',
+                'url'=>'',
+            ],
+            [
+                'title'=>'冰芬文教後臺管理',
+                'image'=>'benfen.cms.jpg',
+                'url'=>'',
+            ],
+            [
+                'title'=>'漫威衛教抽獎後台',
+                'image'=>'marvel.cms.jpg',
+                'url'=>'',
+            ],
+            [
+                'title'=>'補習班試卷系統',
+                'image'=>'cycu.jpg',
+                'url'=>'',
+            ],
             [
                 'title'=>'飛機遊戲',
                 'image'=>'airplane.jpg',
                 'url'=>'',
             ],
             [
-                'title'=>'補習班試卷系統',
-                'image'=>'cycu.jpg',
+                'title'=>'論文問卷系統',
+                'image'=>'ads.jpg',
                 'url'=>'',
             ],
         ];
@@ -260,6 +262,6 @@ class HomeController extends Controller
                 'bar'=>6
             ],
         ];
-        return view("index", ['jobs'=>$jobs, 'awards'=>$awards, 'works'=>$works, 'colors'=>$colors, 'skills'=>$skills]);
+        return view("index", ['jobs'=>$jobs, 'awards'=>$awards, 'public'=>$public, 'private'=>$private, 'colors'=>$colors, 'skills'=>$skills]);
     }
 }

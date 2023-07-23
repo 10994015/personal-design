@@ -959,7 +959,7 @@ header > .icon {
   border: 2px solid #fff;
   border-radius: 32px;
   justify-content: center;
-  margin-top: 160px;
+  margin-top: 100px;
   padding: 40px;
   display: flex;
   overflow: hidden;
@@ -1017,7 +1017,7 @@ header > .icon {
 .works > .works-list {
   grid-column-gap: 20px;
   justify-content: center;
-  margin-top: 80px;
+  margin-top: 160px;
   display: grid;
   width: 100%;
   max-width: 1240px;

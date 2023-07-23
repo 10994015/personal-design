@@ -183,12 +183,24 @@
             <div class="worktext">PORTFOLIO</div>
             @endfor
         </div>
+        <div class="works-list">
+            @foreach($public as $idx=>$work)
+            <a href="@if($work['url'] != "") {{$work['url']}}@else javascript:; @endif" class="item" style="background-image:url('/images/works/{{$work['image']}}'); cursor:@if($work['url'] !='') pointer @else not-allowed @endif;" @if($work['url'] !='') target="_blank" @endif>
+                <div class="tag" style="background-color:{{$colors[$idx%5]}}">{{$work['title']}}</div>
+                @if($work['url']=='')
+                <div class="lock">
+                    <img src="/images/lock.png" />
+                </div>
+                @endif
+            </a>
+            @endforeach
+        </div>
         <div class="work-disclaimer">
-            <div class="text">由於部分專案為與他人合作或後臺管理系統，暫不開放連結。</div>
+            <div class="text">以下專案為與他人合作或後臺管理系統，暫不開放連結。</div>
             <a href="#contacts">與我聯繫</a>
         </div>
-        <div class="works-list">
-            @foreach($works as $idx=>$work)
+        <div class="works-list private-works-list">
+            @foreach($private as $idx=>$work)
             <a href="@if($work['url'] != "") {{$work['url']}}@else javascript:; @endif" class="item" style="background-image:url('/images/works/{{$work['image']}}'); cursor:@if($work['url'] !='') pointer @else not-allowed @endif;" @if($work['url'] !='') target="_blank" @endif>
                 <div class="tag" style="background-color:{{$colors[$idx%5]}}">{{$work['title']}}</div>
                 @if($work['url']=='')

@@ -84,10 +84,15 @@ window.addEventListener('scroll', (e)=>{
     if(window.scrollY >= 3950){
         document.querySelector('.work-disclaimer').classList.add('fade-in')
     }
-    if(window.scrollY >= 4400){
+    if(window.scrollY >= 4300){
         for(let i=0;i<document.querySelector('.works-list').querySelectorAll('a').length;i++){
             setTimeout(()=>{
                 document.querySelector('.works-list').querySelectorAll('a')[i].classList.add('fade-in')
+            }, i*100)
+        }
+        for(let i=0;i<document.querySelector('.private-works-list').querySelectorAll('a').length;i++){
+            setTimeout(()=>{
+                document.querySelector('.private-works-list').querySelectorAll('a')[i].classList.add('fade-in')
             }, i*100)
         }
     }

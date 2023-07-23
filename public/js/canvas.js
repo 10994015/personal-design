@@ -103,7 +103,7 @@ window.addEventListener('scroll', function (e) {
   if (window.scrollY >= 3950) {
     document.querySelector('.work-disclaimer').classList.add('fade-in');
   }
-  if (window.scrollY >= 4400) {
+  if (window.scrollY >= 4300) {
     var _loop3 = function _loop3(_i2) {
       setTimeout(function () {
         document.querySelector('.works-list').querySelectorAll('a')[_i2].classList.add('fade-in');
@@ -112,15 +112,23 @@ window.addEventListener('scroll', function (e) {
     for (var _i2 = 0; _i2 < document.querySelector('.works-list').querySelectorAll('a').length; _i2++) {
       _loop3(_i2);
     }
-  }
-  if (window.scrollY >= 7000) {
     var _loop4 = function _loop4(_i3) {
       setTimeout(function () {
-        document.querySelector('.skills').querySelectorAll('.skill')[_i3].classList.add('fade-in');
-      }, _i3 * 10);
+        document.querySelector('.private-works-list').querySelectorAll('a')[_i3].classList.add('fade-in');
+      }, _i3 * 100);
     };
-    for (var _i3 = 0; _i3 < document.querySelector('.skills').querySelectorAll('.skill').length; _i3++) {
+    for (var _i3 = 0; _i3 < document.querySelector('.private-works-list').querySelectorAll('a').length; _i3++) {
       _loop4(_i3);
+    }
+  }
+  if (window.scrollY >= 7000) {
+    var _loop5 = function _loop5(_i4) {
+      setTimeout(function () {
+        document.querySelector('.skills').querySelectorAll('.skill')[_i4].classList.add('fade-in');
+      }, _i4 * 10);
+    };
+    for (var _i4 = 0; _i4 < document.querySelector('.skills').querySelectorAll('.skill').length; _i4++) {
+      _loop5(_i4);
     }
   }
   if (window.scrollY >= 7500) {
@@ -133,11 +141,11 @@ window.addEventListener('scroll', function (e) {
   moveright.style.transform = "translateX(".concat(window.scrollY * 0.8, "px)");
   var value = window.scrollY / 4 * 0.8;
   var value2 = window.scrollY / 4 * 0.8;
-  for (var _i4 = 0; _i4 < worktext.length; _i4++) {
-    worktext[_i4].style.transform = "translateX(-".concat(value, "px)");
+  for (var _i5 = 0; _i5 < worktext.length; _i5++) {
+    worktext[_i5].style.transform = "translateX(-".concat(value, "px)");
   }
-  for (var _i5 = 0; _i5 < skilltext.length; _i5++) {
-    skilltext[_i5].style.transform = "translateX(-".concat(value2, "px)");
+  for (var _i6 = 0; _i6 < skilltext.length; _i6++) {
+    skilltext[_i6].style.transform = "translateX(-".concat(value2, "px)");
   }
 });
 var send = document.getElementById('send');
