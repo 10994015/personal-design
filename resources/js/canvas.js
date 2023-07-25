@@ -1,5 +1,6 @@
 const loading = document.getElementById('loading')
 window.onload = ()=>{
+    document.querySelector('.wrapper').style.display = "block"
     loading.style.opacity = 0
     setTimeout(()=>{
         loading.style.display = 'none'
