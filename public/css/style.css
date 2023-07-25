@@ -407,7 +407,7 @@ header > .icon {
 }
 @media screen and (max-width: 768px) {
   .experience > .content > .personal > .balloon-tip img {
-    transform: rotate(90deg);
+    transform: rotate(90deg) scaleY(-1);
   }
 }
 .experience > .content > .personal > .paragraph {
