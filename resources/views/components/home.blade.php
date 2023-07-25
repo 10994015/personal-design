@@ -124,8 +124,8 @@
                     <div class="accordion-content" x-ref='content' x-bind:style="{height:isOpen ? ($refs.content.scrollHeight)+'px' : 0 + 'px'}">
                         @foreach($job['contents'] as $content)
                         <div class="list">
-                            <img src="/images/dot.svg" alt="">
-                            <span>{{$content}}</span>
+                            {{-- <img src="/images/dot.svg" alt=""> --}}
+                            {!!$content!!}
                         </div>
                         @endforeach
                     </div>

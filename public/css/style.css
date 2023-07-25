@@ -604,10 +604,17 @@ header > .icon {
   grid-column-gap: 16px;
   margin: 24px 0;
 }
-.experience > .content > .accordions .accordions-list > .accordion-content > .list span {
+.experience > .content > .accordions .accordions-list > .accordion-content > .list h2 {
   color: #0d0d0d;
+  font-size: 19px;
+  line-height: 22px;
+  font-weight: 600;
+}
+.experience > .content > .accordions .accordions-list > .accordion-content > .list li, .experience > .content > .accordions .accordions-list > .accordion-content > .list p {
   font-size: 18px;
   line-height: 22px;
+  color: #0d0d0d;
+  list-style-image: url("/images/dot.svg");
 }
 
 .paper {

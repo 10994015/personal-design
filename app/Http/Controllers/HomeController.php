@@ -11,16 +11,29 @@ class HomeController extends Controller
         $jobs = [
             [
                 'date'=>'2022-2023',
-                'company'=>'自由接案',
+                'company'=>'待業期間',
                 'role'=>'Freelancer',
                 'address'=>'遠端',
                 'contents'=>[
-                    "在畢業之後利用等當兵的時間自由接案，學習新技術、規劃時間、吸取經驗。",
-                    "與赫成補習班合作幫他們製作前後台官方網站。",
-                    "與臺灣碳材料學會合作幫他們製作前後台官方網站。",
-                    "與中原大學商業設計系學生合作，參與畢制專題，負責Web部分。",
-                    "與金恩公司合作，負責設計與撰寫充電車的API。",
-                    "與朋友合作，製作Web遊戲及後台管理系統。",
+                    "<h2>1.與赫成補習班合作幫他們製作前後台官方網站:</h2>",
+                    "<li>前台使用Livewire+Alpine.js 進行架設，包含切版及頁面設計</li>",
+                    "<li>後台使用Vue.js+Laravel RESTful API 進行撰寫包含CRUD</li>",
+                    "<li>伺服器架設在Hostinger</li>",
+                    "<li>幫忙追蹤成效，除了Google Ads架設廣告外也幫忙建立資料至後台</li>",
+                    "<h2>2.與臺灣碳材料學會合作幫他們製作前後台官方網站:</h2>",
+                    "<li>前台使用Livewire+Alpine.js 進行架設，包含切版及頁面設計</li>",
+                    "<li>後台使用Vue.js+Laravel RESTful API 進行撰寫包含CRUD</li>",
+                    "<li>伺服器架設在Hostinger</li>",
+                    "<h2>3.與中原大學商業設計系學生合作，參與畢製專題，負責Web部分:</h2>",
+                    "<li>使用Canvas製作網頁NPC遊戲</li>",
+                    "<li>參與遊戲角色的設計</li>",
+                    "<h2>4.與金恩公司合作，負責設計與撰寫充電車的API:</h2>",
+                    "<li>使用Laravel撰寫API將上游資料彙整處理至下游</li>",
+                    "<li>使用Scribe撰寫API文件</li>",
+                    "<li>將API架設於AWS EC2伺服器上，串接至IIS MySQL資料庫</li>",
+                    "<h2>5..與朋友合作，製作Web遊戲及後台管理系統:</h2>",
+                    "<li>用Livewire製作出網頁遊戲及遊戲後台</li>",
+                    "<li>將程式部署至AWS EC2、資料庫使用RDS(MySQL)並用Docker架設PHPMyAdmin服務</li>",
                 ]
             ],
             [
@@ -29,8 +42,8 @@ class HomeController extends Controller
                 'role'=>'PHP家教',
                 'address'=>'遠端',
                 'contents'=>[
-                    "教導PHP，協助輔仁大學大二學生製作期末專題購物網站。",
-                    "協助輔仁大學大二學生順利修過PHP程式課程，並分享程式語言基本知識。",
+                    "<h2>1.教導PHP，協助輔仁大學大二學生製作期末專題購物網站，包含HTML、CSS、PHP、MySQL以及簡易的購物車。</h2>",
+                    "<h2>2.協助輔仁大學大二學生順利修過PHP程式課程，幫助解決問題，並分享自身經驗。</h2>",
                 ]
             ],
             // [
@@ -48,32 +61,29 @@ class HomeController extends Controller
                 'role'=>'網頁工程師',
                 'address'=>'新竹縣竹東市',
                 'contents'=>[
-                    "使用JavaScript、PHP、MySQL撰寫網頁前端及後端開發。",
-                    "設計網頁排版包含電腦及手機版。",
-                    "參與網頁SEO規劃。",
-                    "協助專案經理進行窗口溝通。",
-                ]
-            ],
-            [
-                'date'=>'2020-2021',
-                'company'=>'中原大學學生Python家教',
-                'role'=>'Python家教',
-                'address'=>'桃園市中壢區',
-                'contents'=>[
-                    "一對一教導大四特殊生基礎Python程式設計撰寫且協助修過Python課程。",
+                    "<h2>1.使用HTML、CSS進行UI切版，JavaScript、Vue.js、PHP(Laravel)、MySQL撰寫網頁前端及後台架設</h2>",
+                    "<h2>2.協助將PHP導入公司</h2>",
+                    "<h2>3.使用AWS EC2、RDS架設API伺服器與資料庫，並架設SSL服務</h2>",
+                    "<h2>4.使用Hostinger架設伺服器部署網站前後台</h2>",
+                    "<h2>5.使用Scribe撰寫API文件</h2>",
+                    "<h2>6.設計網頁排版</h2>",
+                    "<h2>7.協助行銷人員SEO規劃</h2>",
+                    "<h2>8.協助專案經理進行窗口溝通</h2>",
                 ]
             ],
             [
                 'date'=>'2021-2022',
                 'company'=>'中原大學',
-                'role'=>'學習護照講師、課程助教',
+                'role'=>'學習護照講師、課程助教、課程輔導',
                 'address'=>'桃園市中壢區',
                 'contents'=>[
-                    "課後輔導中原大學學生基礎程式概念。",
-                    "擔任網頁前端助教，指導學生HTML、CSS、JavaScript基本程式知識。",
-                    "擔任Python課程助教，指導學生Python基本程式知識。",
-                    "協助老師課堂上的運作。",
-                    "與學弟妹分享JSP知識，並教導使用JSP與資料庫進行溝通製作學校期末專題購物網頁。",
+                    "<h2>1.Python課程程式助教，指導學生課堂Python程式。</h2>",
+                    "<h2>2.前端網頁課程助教，指導中原大學學生HTML、CSS、JavaScript基本程式。</h2>",
+                    "<h2>3.協助老師課堂上的運作。</h2>",
+                    "<h2>4.課後輔導中原大學學生基礎程式概念，包含PHP、RWD、Python、SCSS等。</h2>",
+                    "<h2>5.一對一教導大四特殊生基礎Python程式設計撰寫且協助修過Python課程。</h2>",
+                    "<h2>1.Python課程程式助教，指導學生課堂Python程式。</h2>",
+                    "<h2>6.與學弟妹分享JSP知識，並教導使用JSP與資料庫進行溝通製作學校期末專題購物網頁。</h2>",
                 ]
             ],
             [
@@ -82,7 +92,10 @@ class HomeController extends Controller
                 'role'=>'國中數學輔導老師',
                 'address'=>'桃園市桃園區',
                 'contents'=>[
-                    "因為大學學測數學滿級分以及指考數甲88分(頂標)，因此有對數學有興趣，並一對一輔導國中生數理以及小班制教學。",
+                    "<p>因高中數學學測滿級分以及指考數甲88分，因此對數學指導感到有熱忱</p>",
+                    "<h2>1.一對一輔導國中生數理科目</h2>",
+                    "<h2>2.小班制國小數學教學經驗(約20人左右)</h2>",
+                    "<h2>3.大班制國小導師助理(100人以上)</h2>"
                 ]
             ],
             

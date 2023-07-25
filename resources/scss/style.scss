@@ -555,10 +555,17 @@ header{
                         align-items: center;
                         grid-column-gap: 16px;
                         margin: 24px 0;
-                        span{
+                        h2{
                             color: #0d0d0d;
+                            font-size: 19px;
+                            line-height: 22px;
+                            font-weight: 600;
+                        }
+                        li, p{
                             font-size: 18px;
                             line-height: 22px;
+                            color:#0d0d0d;
+                            list-style-image: url('/images/dot.svg');
                         }
                     }
                 }
