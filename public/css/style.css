@@ -27,6 +27,10 @@ button {
           user-select: none;
 }
 
+#custom-cursor-pointed {
+  width: 70px;
+}
+
 #custom-cursor-pointed, #custom-cursor-noted {
   display: none;
 }

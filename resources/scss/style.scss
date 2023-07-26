@@ -22,6 +22,9 @@ button{
     transform: translate(32px, 35px);
     user-select: none;
 }
+#custom-cursor-pointed{
+    width: 70px;
+}
 #custom-cursor-pointed, #custom-cursor-noted{
     display: none;
 }
