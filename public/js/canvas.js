@@ -10,12 +10,26 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 var loading = document.getElementById('loading');
+var skilltext = document.getElementsByClassName('skilltext');
+var worktext = document.getElementsByClassName('worktext');
+var moveleft = document.getElementById('moveleft');
+var moveleft2 = document.getElementById('moveleft2');
+var moveright = document.getElementById('moveright');
+var movetop = document.getElementById('movetop');
 window.onload = function () {
   document.querySelector('.wrapper').style.display = "block";
-  loading.style.opacity = 0;
+  console.log(window.scrollY);
+  if (700 - window.scrollY * 1.5 >= 0) {
+    movetop.style.transform = "translate(-50%, ".concat(700 - window.scrollY * 1.5, "px)");
+  } else {
+    movetop.style.transform = "translate(-50%, 0)";
+  }
   setTimeout(function () {
-    loading.style.display = 'none';
-  }, 300);
+    loading.style.opacity = 0;
+    setTimeout(function () {
+      loading.style.display = 'none';
+    }, 300);
+  }, 500);
 };
 var canvas = document.querySelector('#me');
 var c = canvas.getContext('2d');
@@ -68,12 +82,6 @@ function animate() {
   me.update();
 }
 animate();
-var skilltext = document.getElementsByClassName('skilltext');
-var worktext = document.getElementsByClassName('worktext');
-var moveleft = document.getElementById('moveleft');
-var moveleft2 = document.getElementById('moveleft2');
-var moveright = document.getElementById('moveright');
-var movetop = document.getElementById('movetop');
 var accordionsList = document.getElementsByClassName('accordions-list');
 window.addEventListener('scroll', function (e) {
   if (window.scrollY >= 900) {

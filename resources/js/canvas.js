@@ -1,10 +1,24 @@
 const loading = document.getElementById('loading')
+const skilltext = document.getElementsByClassName('skilltext');
+const worktext = document.getElementsByClassName('worktext');
+const moveleft = document.getElementById('moveleft')
+const moveleft2 = document.getElementById('moveleft2')
+const moveright = document.getElementById('moveright')
+const movetop = document.getElementById('movetop')
 window.onload = ()=>{
     document.querySelector('.wrapper').style.display = "block"
-    loading.style.opacity = 0
+    console.log(window.scrollY);
+    if(700-window.scrollY*1.5 >= 0){
+        movetop.style.transform =  `translate(-50%, ${700-window.scrollY*1.5}px)`
+    }else{
+        movetop.style.transform =  `translate(-50%, 0)`
+    }
     setTimeout(()=>{
-        loading.style.display = 'none'
-    }, 300)
+        loading.style.opacity = 0
+        setTimeout(()=>{
+            loading.style.display = 'none'
+        }, 300)
+    }, 500)
 }
 
 const canvas = document.querySelector('#me')
@@ -55,12 +69,8 @@ function animate(){
 }
 animate()
 
-const skilltext = document.getElementsByClassName('skilltext');
-const worktext = document.getElementsByClassName('worktext');
-const moveleft = document.getElementById('moveleft')
-const moveleft2 = document.getElementById('moveleft2')
-const moveright = document.getElementById('moveright')
-const movetop = document.getElementById('movetop')
+
+
 const accordionsList = document.getElementsByClassName('accordions-list')
 window.addEventListener('scroll', (e)=>{
     if(window.scrollY >= 900){
