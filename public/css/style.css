@@ -301,7 +301,7 @@ header > .icon {
 .banner > .rainbow {
   bottom: 0;
   left: 50%;
-  width: 90%;
+  width: 100%;
   max-width: 1000px;
   position: absolute;
   transform: translate(-50%, 700px);
