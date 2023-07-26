@@ -56,15 +56,27 @@
             </a>
         </div>
     </header>
-    <div class="water-container">
+    {{-- <div class="water-container">
         <div class="waters" id="waters">
             <img src="/images/waters/6.png" class="water" />
         </div>
-    </div>
+    </div> --}}
     <div class="banner">
+        <div class="cloud cloud1" id="moveleft">
+            <img src="/images/cloud1.png" />
+        </div>
+        <div class="cloud cloud2" id="moveright">
+            <img src="/images/cloud2.png" />
+        </div>
+        <div class="cloud cloud3" id="moveleft2">
+            <img src="/images/cloud3.png" />
+        </div>
+        <div class="rainbow" id="movetop">
+            <img src="/images/rainbow.png" />
+        </div>
        <div class="content">
-            <div class="left" id="moveright">HELLO </div>
-            <div class="right" id="moveleft">I'M LI CHENG-YAN</div>
+            <div class="left" >HELLO </div>
+            <div class="right" >I'M LI CHENG-YAN</div>
        </div>
     </div>
     <div class="experience" id="experience">

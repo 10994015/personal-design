@@ -58,7 +58,9 @@ animate()
 const skilltext = document.getElementsByClassName('skilltext');
 const worktext = document.getElementsByClassName('worktext');
 const moveleft = document.getElementById('moveleft')
+const moveleft2 = document.getElementById('moveleft2')
 const moveright = document.getElementById('moveright')
+const movetop = document.getElementById('movetop')
 const accordionsList = document.getElementsByClassName('accordions-list')
 window.addEventListener('scroll', (e)=>{
     if(window.scrollY >= 900){
@@ -112,8 +114,13 @@ window.addEventListener('scroll', (e)=>{
     }
 
 
-    moveleft.style.transform = `translateX(-${window.scrollY*0.8}px)`
-    moveright.style.transform = `translateX(${window.scrollY*0.8}px)`
+    moveleft.style.transform = `translateX(-${window.scrollY*1.8}px)`
+    moveleft2.style.transform = `translateX(-${window.scrollY*2}px)`
+    moveright.style.transform = `translateX(${window.scrollY*1.8}px)`
+    if(700-window.scrollY*1.5 >=0){
+        movetop.style.transform = `translate(-50%, ${700-window.scrollY*1.5}px)`
+    }
+    console.log(700-window.scrollY*1.5);
     let value = (window.scrollY/4) * 0.8;
     let value2 = (window.scrollY/4) * 0.8;
     for(let i=0;i<worktext.length;i++){

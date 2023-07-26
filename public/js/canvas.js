@@ -71,7 +71,9 @@ animate();
 var skilltext = document.getElementsByClassName('skilltext');
 var worktext = document.getElementsByClassName('worktext');
 var moveleft = document.getElementById('moveleft');
+var moveleft2 = document.getElementById('moveleft2');
 var moveright = document.getElementById('moveright');
+var movetop = document.getElementById('movetop');
 var accordionsList = document.getElementsByClassName('accordions-list');
 window.addEventListener('scroll', function (e) {
   if (window.scrollY >= 900) {
@@ -138,8 +140,13 @@ window.addEventListener('scroll', function (e) {
   if (window.scrollY >= 7800) {
     formContainer.classList.add('fade-in');
   }
-  moveleft.style.transform = "translateX(-".concat(window.scrollY * 0.8, "px)");
-  moveright.style.transform = "translateX(".concat(window.scrollY * 0.8, "px)");
+  moveleft.style.transform = "translateX(-".concat(window.scrollY * 1.8, "px)");
+  moveleft2.style.transform = "translateX(-".concat(window.scrollY * 2, "px)");
+  moveright.style.transform = "translateX(".concat(window.scrollY * 1.8, "px)");
+  if (700 - window.scrollY * 1.5 >= 0) {
+    movetop.style.transform = "translate(-50%, ".concat(700 - window.scrollY * 1.5, "px)");
+  }
+  console.log(700 - window.scrollY * 1.5);
   var value = window.scrollY / 4 * 0.8;
   var value2 = window.scrollY / 4 * 0.8;
   for (var _i5 = 0; _i5 < worktext.length; _i5++) {
