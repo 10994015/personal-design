@@ -334,7 +334,7 @@ header > .icon {
 .banner > .cloud.cloud3 {
   width: 35vh;
   max-width: 400px;
-  bottom: 100px;
+  bottom: 50px;
   left: 20%;
 }
 @media screen and (max-width: 1400px) {
