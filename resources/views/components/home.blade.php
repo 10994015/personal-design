@@ -74,7 +74,7 @@
         <div class="rainbow" id="movetop">
             <img src="/images/rainbow.png" />
         </div>
-       <div class="content">
+       <div class="content" id="bannerText">
             <div class="left" >HELLO </div>
             <div class="right" >I'M LI CHENG-YAN</div>
        </div>

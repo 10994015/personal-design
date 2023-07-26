@@ -5,6 +5,7 @@ const moveleft = document.getElementById('moveleft')
 const moveleft2 = document.getElementById('moveleft2')
 const moveright = document.getElementById('moveright')
 const movetop = document.getElementById('movetop')
+const bannerText = document.getElementById('bannerText')
 window.onload = ()=>{
     document.querySelector('.wrapper').style.display = "block"
     console.log(window.scrollY);
@@ -13,6 +14,7 @@ window.onload = ()=>{
     }else{
         movetop.style.transform =  `translate(-50%, 0)`
     }
+    bannerText.style.opacity = (1000-window.scrollY)/1000
     setTimeout(()=>{
         loading.style.opacity = 0
         setTimeout(()=>{
@@ -124,9 +126,10 @@ window.addEventListener('scroll', (e)=>{
     }
 
 
-    moveleft.style.transform = `translateX(-${window.scrollY*1.8}px)`
-    moveleft2.style.transform = `translateX(-${window.scrollY*2}px)`
+    moveleft.style.transform = `translateX(-${window.scrollY*1.5}px)`
+    moveleft2.style.transform = `translateX(-${window.scrollY*3}px)`
     moveright.style.transform = `translateX(${window.scrollY*1.8}px)`
+    bannerText.style.opacity = (1000-window.scrollY)/1000
     if(700-window.scrollY*1.5 >=0){
         movetop.style.transform = `translate(-50%, ${700-window.scrollY*1.5}px)`
     }

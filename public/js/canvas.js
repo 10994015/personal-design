@@ -16,6 +16,7 @@ var moveleft = document.getElementById('moveleft');
 var moveleft2 = document.getElementById('moveleft2');
 var moveright = document.getElementById('moveright');
 var movetop = document.getElementById('movetop');
+var bannerText = document.getElementById('bannerText');
 window.onload = function () {
   document.querySelector('.wrapper').style.display = "block";
   console.log(window.scrollY);
@@ -24,6 +25,7 @@ window.onload = function () {
   } else {
     movetop.style.transform = "translate(-50%, 0)";
   }
+  bannerText.style.opacity = (1000 - window.scrollY) / 1000;
   setTimeout(function () {
     loading.style.opacity = 0;
     setTimeout(function () {
@@ -148,9 +150,10 @@ window.addEventListener('scroll', function (e) {
   if (window.scrollY >= 7800) {
     formContainer.classList.add('fade-in');
   }
-  moveleft.style.transform = "translateX(-".concat(window.scrollY * 1.8, "px)");
-  moveleft2.style.transform = "translateX(-".concat(window.scrollY * 2, "px)");
+  moveleft.style.transform = "translateX(-".concat(window.scrollY * 1.5, "px)");
+  moveleft2.style.transform = "translateX(-".concat(window.scrollY * 3, "px)");
   moveright.style.transform = "translateX(".concat(window.scrollY * 1.8, "px)");
+  bannerText.style.opacity = (1000 - window.scrollY) / 1000;
   if (700 - window.scrollY * 1.5 >= 0) {
     movetop.style.transform = "translate(-50%, ".concat(700 - window.scrollY * 1.5, "px)");
   }
