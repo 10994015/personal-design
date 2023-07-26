@@ -13,6 +13,7 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
 mix.js('resources/js/canvas.js', 'public/js')
+mix.js('resources/js/cursor.js', 'public/js')
 .sass('resources/scss/style.scss', 'public/css')
     .postCss('resources/css/app.css', 'public/css', [
         //

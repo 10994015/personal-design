@@ -25,7 +25,7 @@ window.onload = function () {
   } else {
     movetop.style.transform = "translate(-50%, 0)";
   }
-  bannerText.style.opacity = (1000 - window.scrollY) / 1000;
+  bannerText.style.opacity = (1000 - window.scrollY * 3.1) / 1000;
   setTimeout(function () {
     loading.style.opacity = 0;
     setTimeout(function () {
@@ -153,7 +153,7 @@ window.addEventListener('scroll', function (e) {
   moveleft.style.transform = "translateX(-".concat(window.scrollY * 1.5, "px)");
   moveleft2.style.transform = "translateX(-".concat(window.scrollY * 3, "px)");
   moveright.style.transform = "translateX(".concat(window.scrollY * 1.8, "px)");
-  bannerText.style.opacity = (1000 - window.scrollY) / 1000;
+  bannerText.style.opacity = (1000 - window.scrollY * 3.1) / 1000;
   if (700 - window.scrollY * 1.5 >= 0) {
     movetop.style.transform = "translate(-50%, ".concat(700 - window.scrollY * 1.5, "px)");
   }

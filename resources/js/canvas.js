@@ -14,7 +14,7 @@ window.onload = ()=>{
     }else{
         movetop.style.transform =  `translate(-50%, 0)`
     }
-    bannerText.style.opacity = (1000-window.scrollY)/1000
+    bannerText.style.opacity = (1000-window.scrollY*3.1)/1000
     setTimeout(()=>{
         loading.style.opacity = 0
         setTimeout(()=>{
@@ -22,6 +22,7 @@ window.onload = ()=>{
         }, 300)
     }, 500)
 }
+
 
 const canvas = document.querySelector('#me')
 const c = canvas.getContext('2d')
@@ -129,7 +130,7 @@ window.addEventListener('scroll', (e)=>{
     moveleft.style.transform = `translateX(-${window.scrollY*1.5}px)`
     moveleft2.style.transform = `translateX(-${window.scrollY*3}px)`
     moveright.style.transform = `translateX(${window.scrollY*1.8}px)`
-    bannerText.style.opacity = (1000-window.scrollY)/1000
+    bannerText.style.opacity = (1000-window.scrollY*3.1)/1000
     if(700-window.scrollY*1.5 >=0){
         movetop.style.transform = `translate(-50%, ${700-window.scrollY*1.5}px)`
     }
@@ -200,5 +201,3 @@ function handleWheelEvent(event) {
       header.style.top = "0"
     }
   }
-
-

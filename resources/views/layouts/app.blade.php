@@ -10,18 +10,24 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body class="body-1" >
+    
     <div class="loading" id="loading" >
         <div class="content">
             <div class="loading-content-border"></div>
             <div class="cover">LI</div>
         </div>
     </div>
-
+    {{-- <div class="cursor rounded"></div>
+    <div class="cursor pointed"><div> --}}
+    <img id="custom-cursor-rounded"  src="/images/default.png" />
+    <img id="custom-cursor-pointed"  src="/images/point.png" />
+    <img id="custom-cursor-noted"  src="/images/not.png" />
     @include('components.home')
     
     <script src='/js/app.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js" integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src='/js/index.min.js'></script>
+    <script src='/js/cursor.js'></script>
     <script src='/js/canvas.js'></script>
     @stack('scripts')
 </body>

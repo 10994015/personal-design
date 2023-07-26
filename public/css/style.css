@@ -2,10 +2,47 @@
   font-family: "Kanit", "cwTeXYen", sans-serif;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  cursor: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 html, body {
   overscroll-behavior: none;
+  cursor: none;
+}
+
+button {
+  cursor: none;
+}
+
+#custom-cursor-rounded, #custom-cursor-pointed, #custom-cursor-noted {
+  position: fixed;
+  z-index: 999999;
+  width: 60px;
+  transform: translate(32px, 35px);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+#custom-cursor-pointed, #custom-cursor-noted {
+  display: none;
+}
+
+.rounded {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.pointed {
+  width: 7px;
+  height: 7px;
+  background-color: white;
+  border-radius: 50%;
 }
 
 .body-1 {
@@ -90,7 +127,6 @@ html, body {
   align-items: center;
   flex-direction: column;
   grid-row-gap: 4px;
-  cursor: pointer;
   display: none;
 }
 @media screen and (max-width: 700px) {
@@ -283,7 +319,7 @@ header > .icon {
 .banner > .cloud.cloud1 {
   width: 40vh;
   max-width: 400px;
-  top: 150px;
+  top: 130px;
   left: 5%;
 }
 @media screen and (max-width: 1400px) {
@@ -294,7 +330,7 @@ header > .icon {
 .banner > .cloud.cloud3 {
   width: 35vh;
   max-width: 400px;
-  top: 580px;
+  top: 540px;
   left: 20%;
 }
 @media screen and (max-width: 1400px) {
@@ -305,7 +341,7 @@ header > .icon {
 .banner > .cloud.cloud2 {
   width: 38vh;
   max-width: 425px;
-  top: 300px;
+  top: 230px;
   right: 7.5%;
 }
 @media screen and (max-width: 1400px) {
@@ -334,6 +370,7 @@ header > .icon {
   position: relative;
   z-index: 5;
   padding-top: 100px;
+  transform: translateY(-50px);
 }
 .banner > .content div {
   text-shadow: 7px 7px #0d0d0d;
@@ -625,7 +662,6 @@ header > .icon {
   }
 }
 .experience > .content > .accordions .accordions-list > .job > .plus {
-  cursor: pointer;
   transition: 0.8s;
 }
 .experience > .content > .accordions .accordions-list > .job > .plus.rotate {
@@ -1102,7 +1138,6 @@ header > .icon {
   background-position: center;
   border-radius: 24px;
   position: relative;
-  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1289,7 +1324,6 @@ header > .icon {
   z-index: 15;
   color: #57EF97;
   opacity: 0;
-  cursor: default;
   transition: 1s;
   text-align: center;
 }
