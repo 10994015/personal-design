@@ -2,6 +2,17 @@ const cursorRounded = document.querySelector('#custom-cursor-rounded');
 const cursorPointed = document.querySelector('#custom-cursor-pointed');
 const cursorNoted = document.querySelector('#custom-cursor-noted');
 
+function isMobileDevice() {
+    const mobileDevice = ['Android', 'webOS', 'iPhone', 'iPad', 'iPod', 'BlackBerry', 'Windows Phone']
+    let isMobileDevice = mobileDevice.some(e => navigator.userAgent.match(e))
+    return isMobileDevice
+}
+
+if(isMobileDevice()){
+    cursorRounded.style.display = "none"
+}
+
+
 const moveCursor = (e)=> {
     const mouseY = e.clientY;
     const mouseX = e.clientX;

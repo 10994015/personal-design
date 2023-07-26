@@ -6,6 +6,16 @@ var __webpack_exports__ = {};
 var cursorRounded = document.querySelector('#custom-cursor-rounded');
 var cursorPointed = document.querySelector('#custom-cursor-pointed');
 var cursorNoted = document.querySelector('#custom-cursor-noted');
+function isMobileDevice() {
+  var mobileDevice = ['Android', 'webOS', 'iPhone', 'iPad', 'iPod', 'BlackBerry', 'Windows Phone'];
+  var isMobileDevice = mobileDevice.some(function (e) {
+    return navigator.userAgent.match(e);
+  });
+  return isMobileDevice;
+}
+if (isMobileDevice()) {
+  cursorRounded.style.display = "none";
+}
 var moveCursor = function moveCursor(e) {
   var mouseY = e.clientY;
   var mouseX = e.clientX;
