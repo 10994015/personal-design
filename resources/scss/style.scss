@@ -8,6 +8,7 @@ $fadeY :50px;
 }
 html,body{
     overscroll-behavior: none;
+    // cursor:none;
 }
 .body-1{
     border: 3px solid #0d0d0d;
@@ -265,22 +266,31 @@ header{
         position: absolute;
         z-index: 10;
         &.cloud1{
-            width: 50%;
-            max-width: 450px;
-            top: 80px;
+            width: 40vh;
+            max-width: 400px;
+            top: 150px;
             left:5%;
+            @media screen and (max-width:1400px){
+                width: 30%;
+            }
         }
         &.cloud3{
-            width: 40%;
+            width: 35vh;
             max-width: 400px;
-            top: 550px;
+            top: 580px;
             left:20%;
+            @media screen and (max-width:1400px){
+                width: 20%;
+            }
         }
         &.cloud2{
-            width: 45%;
+            width: 38vh;
             max-width: 425px;
             top: 300px;
             right:7.5%;
+            @media screen and (max-width:1400px){
+                width: 25%;
+            }
         }
     }
     >.rainbow{

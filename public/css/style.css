@@ -281,22 +281,37 @@ header > .icon {
   z-index: 10;
 }
 .banner > .cloud.cloud1 {
-  width: 50%;
-  max-width: 450px;
-  top: 80px;
+  width: 40vh;
+  max-width: 400px;
+  top: 150px;
   left: 5%;
 }
+@media screen and (max-width: 1400px) {
+  .banner > .cloud.cloud1 {
+    width: 30%;
+  }
+}
 .banner > .cloud.cloud3 {
-  width: 40%;
+  width: 35vh;
   max-width: 400px;
-  top: 550px;
+  top: 580px;
   left: 20%;
 }
+@media screen and (max-width: 1400px) {
+  .banner > .cloud.cloud3 {
+    width: 20%;
+  }
+}
 .banner > .cloud.cloud2 {
-  width: 45%;
+  width: 38vh;
   max-width: 425px;
   top: 300px;
   right: 7.5%;
+}
+@media screen and (max-width: 1400px) {
+  .banner > .cloud.cloud2 {
+    width: 25%;
+  }
 }
 .banner > .rainbow {
   bottom: 0;
