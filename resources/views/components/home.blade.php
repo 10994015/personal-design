@@ -98,7 +98,7 @@
                     <img src="/images/balloon_tip.svg" alt="">
                 </div>
                 <div class="paragraph">
-                    <i>"I'm the man who'll become the pirate king!"</i>
+                    <i>"My Dream is To Become Hokage!"</i>
                     <p>來自中原大學碩士，從大二開始學習基本網頁開發，由基礎JSP開始學習，直到現在主要使用PHP以及JavaScript來進行開發。碩士論文對GAN(生成對抗網路)與室內設計的結合進行研究，熱愛嘗試新的事物，將所有人當成學習的對象。<br><br>
                     勇於嘗試、不怕困難，遇見困難我勇於承擔。<br>
                     善於溝通、團隊合作，在學期間時常擔任團隊協調者。<br>
