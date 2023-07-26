@@ -44,30 +44,32 @@ var cursorDefault = document.querySelectorAll('.cursor-pointed');
 var input = document.querySelectorAll('input');
 var textarea = document.querySelectorAll('textarea');
 var cursorNot = document.querySelectorAll('.cursor-not');
-for (var i = 0; i < alink.length; i++) {
-  alink[i].addEventListener('mouseover', movePoint);
-  alink[i].addEventListener('mouseout', moveDefault);
+if (!isMobileDevice()) {
+  for (var i = 0; i < alink.length; i++) {
+    alink[i].addEventListener('mouseover', movePoint);
+    alink[i].addEventListener('mouseout', moveDefault);
+  }
+  for (var _i = 0; _i < cursorDefault.length; _i++) {
+    cursorDefault[_i].addEventListener('mouseover', movePoint);
+    cursorDefault[_i].addEventListener('mouseout', moveDefault);
+  }
+  for (var _i2 = 0; _i2 < input.length; _i2++) {
+    input[_i2].addEventListener('mouseover', movePoint);
+    input[_i2].addEventListener('mouseout', moveDefault);
+  }
+  for (var _i3 = 0; _i3 < textarea.length; _i3++) {
+    textarea[_i3].addEventListener('mouseover', movePoint);
+    textarea[_i3].addEventListener('mouseout', moveDefault);
+  }
+  for (var _i4 = 0; _i4 < btn.length; _i4++) {
+    btn[_i4].addEventListener('mouseover', movePoint);
+    btn[_i4].addEventListener('mouseout', moveDefault);
+  }
+  for (var _i5 = 0; _i5 < cursorNot.length; _i5++) {
+    cursorNot[_i5].addEventListener('mouseover', moveNot);
+    cursorNot[_i5].addEventListener('mouseout', moveDefault);
+  }
+  window.addEventListener('mousemove', moveCursor);
 }
-for (var _i = 0; _i < cursorDefault.length; _i++) {
-  cursorDefault[_i].addEventListener('mouseover', movePoint);
-  cursorDefault[_i].addEventListener('mouseout', moveDefault);
-}
-for (var _i2 = 0; _i2 < input.length; _i2++) {
-  input[_i2].addEventListener('mouseover', movePoint);
-  input[_i2].addEventListener('mouseout', moveDefault);
-}
-for (var _i3 = 0; _i3 < textarea.length; _i3++) {
-  textarea[_i3].addEventListener('mouseover', movePoint);
-  textarea[_i3].addEventListener('mouseout', moveDefault);
-}
-for (var _i4 = 0; _i4 < btn.length; _i4++) {
-  btn[_i4].addEventListener('mouseover', movePoint);
-  btn[_i4].addEventListener('mouseout', moveDefault);
-}
-for (var _i5 = 0; _i5 < cursorNot.length; _i5++) {
-  cursorNot[_i5].addEventListener('mouseover', moveNot);
-  cursorNot[_i5].addEventListener('mouseout', moveDefault);
-}
-window.addEventListener('mousemove', moveCursor);
 /******/ })()
 ;
