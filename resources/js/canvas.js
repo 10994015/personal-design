@@ -120,7 +120,6 @@ window.addEventListener('scroll', (e)=>{
     if(700-window.scrollY*1.5 >=0){
         movetop.style.transform = `translate(-50%, ${700-window.scrollY*1.5}px)`
     }
-    console.log(700-window.scrollY*1.5);
     let value = (window.scrollY/4) * 0.8;
     let value2 = (window.scrollY/4) * 0.8;
     for(let i=0;i<worktext.length;i++){

@@ -146,7 +146,6 @@ window.addEventListener('scroll', function (e) {
   if (700 - window.scrollY * 1.5 >= 0) {
     movetop.style.transform = "translate(-50%, ".concat(700 - window.scrollY * 1.5, "px)");
   }
-  console.log(700 - window.scrollY * 1.5);
   var value = window.scrollY / 4 * 0.8;
   var value2 = window.scrollY / 4 * 0.8;
   for (var _i5 = 0; _i5 < worktext.length; _i5++) {
