@@ -537,6 +537,7 @@ header{
                         grid-column-gap: 52px;
                         align-items: center;
                         display: flex;
+                        width: 200px;
                         @media screen and (max-width:781px){
                             flex-direction: column;
                             align-items:flex-start;

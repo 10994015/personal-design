@@ -584,6 +584,7 @@ header > .icon {
   grid-column-gap: 52px;
   align-items: center;
   display: flex;
+  width: 200px;
 }
 @media screen and (max-width: 781px) {
   .experience > .content > .accordions .accordions-list > .job > .data {
