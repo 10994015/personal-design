@@ -217,12 +217,12 @@ class HomeController extends Controller
                 'bar'=>8
             ],
             [
-                'skill'=>'Vue.Js',
-                'bar'=>7
-            ],
-            [
                 'skill'=>'Livewire',
                 'bar'=>8
+            ],
+            [
+                'skill'=>'Vue.Js',
+                'bar'=>7
             ],
             [
                 'skill'=>'Alpine.Js',

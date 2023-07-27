@@ -106,23 +106,26 @@ window.addEventListener('scroll', (e)=>{
                 document.querySelector('.works-list').querySelectorAll('a')[i].classList.add('fade-in')
             }, i*100)
         }
+        
+    }
+    if(window.scrollY > 6100){
         for(let i=0;i<document.querySelector('.private-works-list').querySelectorAll('a').length;i++){
             setTimeout(()=>{
                 document.querySelector('.private-works-list').querySelectorAll('a')[i].classList.add('fade-in')
             }, i*100)
         }
     }
-    if(window.scrollY >= 7000){
+    if(window.scrollY >= 7500){
         for(let i=0;i<document.querySelector('.skills').querySelectorAll('.skill').length;i++){
             setTimeout(()=>{
                 document.querySelector('.skills').querySelectorAll('.skill')[i].classList.add('fade-in')
             }, i*10)
         }
     }
-    if(window.scrollY >= 7500){
+    if(window.scrollY >= 8200){
         document.getElementById('contacts2').querySelector('h2').classList.add('fade-in')
     }
-    if(window.scrollY >= 7800){
+    if(window.scrollY >= 8500){
         formContainer.classList.add('fade-in')
     }
 

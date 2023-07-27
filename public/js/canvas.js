@@ -125,6 +125,8 @@ window.addEventListener('scroll', function (e) {
     for (var _i2 = 0; _i2 < document.querySelector('.works-list').querySelectorAll('a').length; _i2++) {
       _loop3(_i2);
     }
+  }
+  if (window.scrollY > 6100) {
     var _loop4 = function _loop4(_i3) {
       setTimeout(function () {
         document.querySelector('.private-works-list').querySelectorAll('a')[_i3].classList.add('fade-in');
@@ -134,7 +136,7 @@ window.addEventListener('scroll', function (e) {
       _loop4(_i3);
     }
   }
-  if (window.scrollY >= 7000) {
+  if (window.scrollY >= 7500) {
     var _loop5 = function _loop5(_i4) {
       setTimeout(function () {
         document.querySelector('.skills').querySelectorAll('.skill')[_i4].classList.add('fade-in');
@@ -144,10 +146,10 @@ window.addEventListener('scroll', function (e) {
       _loop5(_i4);
     }
   }
-  if (window.scrollY >= 7500) {
+  if (window.scrollY >= 8200) {
     document.getElementById('contacts2').querySelector('h2').classList.add('fade-in');
   }
-  if (window.scrollY >= 7800) {
+  if (window.scrollY >= 8500) {
     formContainer.classList.add('fade-in');
   }
   moveleft.style.transform = "translateX(-".concat(window.scrollY * 1.5, "px)");
