@@ -15,7 +15,7 @@ html,body{
 button{
     cursor: none;
 }
-#custom-cursor-rounded, #custom-cursor-pointed, #custom-cursor-noted{
+#custom-cursor-rounded, #custom-cursor-pointed, #custom-cursor-noted, #custom-cursor-texted{
     position: fixed;
     z-index: 999999;
     width: 60px;
@@ -25,7 +25,14 @@ button{
 #custom-cursor-pointed{
     width: 70px;
 }
-#custom-cursor-pointed, #custom-cursor-noted{
+#custom-cursor-noted{
+    width: 40px;
+}
+#custom-cursor-texted{
+    width: 16px;
+    transform: translate(0, 0);
+}
+#custom-cursor-pointed, #custom-cursor-noted, #custom-cursor-texted{
     display: none;
 }
 .rounded{

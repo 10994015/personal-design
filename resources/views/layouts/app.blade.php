@@ -22,6 +22,7 @@
     <img id="custom-cursor-rounded"  src="/images/default.png" />
     <img id="custom-cursor-pointed"  src="/images/point.png" />
     <img id="custom-cursor-noted"  src="/images/not.png" />
+    <img id="custom-cursor-texted"  src="/images/text.png" />
     @include('components.home')
     
     <script src='/js/app.js'></script>

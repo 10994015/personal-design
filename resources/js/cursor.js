@@ -1,6 +1,7 @@
 const cursorRounded = document.querySelector('#custom-cursor-rounded');
 const cursorPointed = document.querySelector('#custom-cursor-pointed');
 const cursorNoted = document.querySelector('#custom-cursor-noted');
+const cursorTexted = document.querySelector('#custom-cursor-texted');
 
 function isMobileDevice() {
     const mobileDevice = ['Android', 'webOS', 'iPhone', 'iPad', 'iPod', 'BlackBerry', 'Windows Phone']
@@ -19,23 +20,33 @@ const moveCursor = (e)=> {
     cursorRounded.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
     cursorPointed.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
     cursorNoted.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+    cursorTexted.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
    
   }
   
   const moveNot = ()=>{
+    cursorTexted.style.display="none"
     cursorRounded.style.display = "none"
     cursorPointed.style.display = "none"
     cursorNoted.style.display = "block"
 }
 const movePoint = ()=>{
+    cursorTexted.style.display="none"
     cursorNoted.style.display = "none"
     cursorRounded.style.display = "none"
     cursorPointed.style.display = "block"
 }
 const moveDefault = ()=>{
+    cursorTexted.style.display="none"
     cursorNoted.style.display = "none"
-    cursorRounded.style.display = "block"
     cursorPointed.style.display = "none"
+    cursorRounded.style.display = "block"
+}
+const moveText = ()=>{
+    cursorNoted.style.display = "none"
+    cursorRounded.style.display = "none"
+    cursorPointed.style.display = "none"
+    cursorTexted.style.display = "block"
 }
 const alink = document.querySelectorAll('a')
 const btn = document.querySelectorAll('button')
@@ -55,11 +66,11 @@ if(!isMobileDevice()){
         cursorDefault[i].addEventListener('mouseout', moveDefault)
     }
     for(let i=0;i<input.length;i++){
-        input[i].addEventListener('mouseover', movePoint)
+        input[i].addEventListener('mouseover', moveText)
         input[i].addEventListener('mouseout', moveDefault)
     }
     for(let i=0;i<textarea.length;i++){
-        textarea[i].addEventListener('mouseover', movePoint)
+        textarea[i].addEventListener('mouseover', moveText)
         textarea[i].addEventListener('mouseout', moveDefault)
     }
     for(let i=0;i<btn.length;i++){
