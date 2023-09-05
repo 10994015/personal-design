@@ -10,10 +10,21 @@ class HomeController extends Controller
         $fake = 'bullet point icon Designing an educational platform for gamers from gamers, with particular focus on the content streaming features.';
         $jobs = [
             [
+                'date'=>'2023-至今',
+                'company'=>'永佳捷科技股份有限公司',
+                'role'=>'資訊工程師',
+                'address'=>'桃園市觀音區',
+                'contents'=>[
+                    "<h2>1.負責全公司PC、資訊主機、網路維運，資料庫之規劃、設計、運維、優化與資訊安全，以確保系統之正常運作。</h2>",
+                    "<h2>2.負責各部門程式、公用程式與平臺開發之撰寫、測試，以符合設計規範與委託部門的需求，並確保系統開發的進度與品質。</h2>",
+                    "<h2>3.負責IT公用程式/平臺開發，諮詢專案的規劃和實施工作安排。</h2>",
+                ],
+            ],
+            [
                 'date'=>'2022-2023',
-                'company'=>'待業期間',
-                'role'=>'Freelancer',
-                'address'=>'遠端',
+                'company'=>'九霄空間設計',
+                'role'=>'負責人',
+                'address'=>'桃園市桃園區',
                 'contents'=>[
                     "<h2>1.與赫成補習班合作幫他們製作前後台官方網站:</h2>",
                     "<li>前台使用Livewire+Alpine.js 進行架設，包含切版及頁面設計</li>",
@@ -58,7 +69,7 @@ class HomeController extends Controller
             [
                 'date'=>'2021-2022',
                 'company'=>'憶旺智慧股份有限公司',
-                'role'=>'網頁工程師',
+                'role'=>'前端工程師',
                 'address'=>'新竹縣竹東市',
                 'contents'=>[
                     "<h2>1.使用HTML、CSS進行UI切版，JavaScript、Vue.js、PHP(Laravel)、MySQL撰寫網頁前端及後台架設</h2>",
