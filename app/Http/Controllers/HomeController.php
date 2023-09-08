@@ -123,6 +123,11 @@ class HomeController extends Controller
         ];
         $public = [
             [
+                'title'=>'九霄空間設計',
+                'image'=>'jiousaio.jpg',
+                'url'=>'https://jiousaio.com/',
+            ],
+            [
                 'title'=>'赫成教育',
                 'image'=>'hecheng.png',
                 'url'=>'https://hechengschool.com/',
@@ -142,11 +147,7 @@ class HomeController extends Controller
                 'image'=>'fzr.jpg',
                 'url'=>'http://3.1.217.108/',
             ],
-            [
-                'title'=>'九霄空間設計',
-                'image'=>'jiousaio.jpg',
-                'url'=>'https://jiousaio.com/',
-            ],
+            
             [
                 'title'=>'九霄模型',
                 'image'=>'jiousaioshop.jpg',
