@@ -9,21 +9,21 @@ class HomeController extends Controller
     public function index(){
         $fake = 'bullet point icon Designing an educational platform for gamers from gamers, with particular focus on the content streaming features.';
         $jobs = [
-            [
-                'date'=>'2023-至今',
-                'company'=>'永佳捷科技股份有限公司',
-                'role'=>'資訊工程師',
-                'address'=>'桃園市觀音區',
-                'contents'=>[
-                    "<h2>1.負責全公司PC、資訊主機、網路維運，資料庫之規劃、設計、運維、優化與資訊安全，以確保系統之正常運作。</h2>",
-                    "<h2>2.負責各部門程式、公用程式與平臺開發之撰寫、測試，以符合設計規範與委託部門的需求，並確保系統開發的進度與品質。</h2>",
-                    "<h2>3.負責IT公用程式/平臺開發，諮詢專案的規劃和實施工作安排。</h2>",
-                ],
-            ],
+            // [
+            //     'date'=>'2023-至今',
+            //     'company'=>'永佳捷科技股份有限公司',
+            //     'role'=>'資訊工程師',
+            //     'address'=>'桃園市觀音區',
+            //     'contents'=>[
+            //         "<h2>1.負責全公司PC、資訊主機、網路維運，資料庫之規劃、設計、運維、優化與資訊安全，以確保系統之正常運作。</h2>",
+            //         "<h2>2.負責各部門程式、公用程式與平臺開發之撰寫、測試，以符合設計規範與委託部門的需求，並確保系統開發的進度與品質。</h2>",
+            //         "<h2>3.負責IT公用程式/平臺開發，諮詢專案的規劃和實施工作安排。</h2>",
+            //     ],
+            // ],
             [
                 'date'=>'2022-2023',
-                'company'=>'九霄空間設計',
-                'role'=>'負責人',
+                'company'=>'自由接案',
+                'role'=>'Freelancer',
                 'address'=>'桃園市桃園區',
                 'contents'=>[
                     "<h2>1.與赫成補習班合作幫他們製作前後台官方網站:</h2>",
